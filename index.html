@@ -105,7 +105,7 @@
         animation: animate 3s forwards !important;
     }
     }
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         p{
             font-size: 24pt;
         }
@@ -138,14 +138,16 @@
             font-size: 17.5pt;
         }
         .biography img{
-        width: 300px;
-        animation: animateFromLeft linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 25%;
+            width: 300px;
+            animation: animate 2.5s forwards !important;
+        }
+        .biography p{
+            color: black;
+            animation: animate 2.5s forwards !important;
+        }
 
     }
-    }
-    @media (min-width: 1001px){
+    @media (min-width: 1201px){
         p{
             font-size: 32pt;
         }
@@ -180,6 +182,12 @@
         .biography img{
         width: 400px;
         animation: animateFromLeft linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 25%;
+    }
+        .biography p{
+        color: black;
+        animation: animateFromRight linear;
         animation-timeline: view();
         animation-range: entry 0% cover 25%;
     }
