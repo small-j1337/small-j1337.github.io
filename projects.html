@@ -42,7 +42,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid white;
         }
         .links li{
             display: inline-block;
@@ -52,18 +52,24 @@
         .logo a{
             margin-left: 25px;
             text-decoration: none;
-            color: black;
+            color: white;
         }
         .links a{
             text-decoration: none;
-            color: black;
+            color: white;
         }
         .subContainer{
-            flex: grow;
+            flex: 1;
+            align-content: center;
         }
         .container{
             display: flex;
             flex-direction: column;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.75),rgba(0,0,0,0)), url("projectBanner.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
         }
         @media(max-width: 600px){
             /* mark all items here !important */
@@ -134,7 +140,9 @@
             }
         }
         .site-topic{
-            margin: 30px;
+            margin-left: 30px;
+            margin-top: 60px;
+            margin-bottom: 60px;
         }
         .site-topic .Discover{
             animation: slideFromTop 1s forwards;
