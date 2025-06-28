@@ -38,7 +38,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid white;
         }
         .links li{
             display: inline-block;
@@ -48,18 +48,23 @@
         .logo a{
             margin-left: 25px;
             text-decoration: none;
-            color: black;
+            color: white;
         }
         .links a{
             text-decoration: none;
-            color: black;
+            color: white;
         }
         .subContainer{
-            flex: grow;
+            flex: 1;
+            align-content: center;
         }
         .container{
             display: flex;
             flex-direction: column;
+            background-image: url("communityBanner.jpg");
+            background-size: 100% 100%;
+            aspect-ratio: 3/1;
+            color: white;
         }
         @media(max-width: 600px){
             /* mark all items here !important */
