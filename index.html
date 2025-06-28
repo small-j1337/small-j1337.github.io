@@ -219,6 +219,7 @@
         margin: 0;
         display: flex;
         flex-direction: column;
+        height: 100vh;
     }
     .socials{
         display: flex;
@@ -236,6 +237,9 @@
         flex-direction: row;
         margin: 30px;
     }
+    .mainContent{
+        flex: 1;
+    }
     .biography p{
         color: black;
         animation: animateFromRight linear;
@@ -247,6 +251,7 @@
         font-size: 12pt;
         margin-top: 0;
         align-self: center;
+        text-justify: flex-end;
     }
     .whoAmI{
         justify-items: center;
@@ -295,12 +300,14 @@
     <div class = "whoAmI">
         <h2>Who Am I?</h2>
     </div>
-    <div class = "biography">
-        <img src = "bio.png">
-        <p>My name is Jerry Liang and I am a student at Mountain View High School. My favorite hobbies are coding, 
-            playing Minecraft, creating art, and making short videos. I hope that in the future
-             I will create more projects that can benefit 
-             others. </p>
+    <div class = "mainContent">
+        <div class = "biography">
+            <img src = "bio.png">
+            <p>My name is Jerry Liang and I am a student at Mountain View High School. My favorite hobbies are coding, 
+                playing Minecraft, creating art, and making short videos. I hope that in the future
+                I will create more projects that can benefit 
+                others. </p>
+        </div>
     </div>
 
 
