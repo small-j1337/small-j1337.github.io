@@ -2,9 +2,62 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="icon.png">
     <title>Page Not Found</title>
 </head>
 <body>
-    <h1>Error</h1>
+    <style>
+        @font-face{
+            src: url("customFont.ttf");
+            font-family: customFont;
+        }
+        @keyframes slideUp{
+            from{
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        body{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            justify-items: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+            animation: slideUp 3s forwards;
+        }
+        .container h1{
+            font-family: customFont;
+            font-size: 40pt;
+            text-align: center;
+            margin: 30px;
+        }
+        .container button{
+            padding: 20px;
+            background: none;
+            border: 4px solid black;
+            font-family: customFont;
+            font-size: 20pt;
+            margin: 30px;
+            cursor: pointer;
+        }
+        .container button a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <div class = "container">
+        <h1>Oops, it looks like<br> you got lost!</h1>
+        <button><a href = "index.html">Take Me Home</a></button>
+    </div>
 </body>
 </html>
