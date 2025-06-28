@@ -34,6 +34,9 @@
         body{
             margin: 0;
             font-family: customFont;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         .navBar{
             display: flex;
@@ -156,7 +159,7 @@
             cursor: pointer;
         }
         .copyright{
-            justify-self: center;
+            align-self: center;
             margin: 0;
             font-size: 12pt;
         }
@@ -170,8 +173,9 @@
         .logo:hover{
             transform: translateY(-5px);
         }
-        .comingSoon{
-            justify-self: center;
+        .mainContent{
+            justify-items: center;
+            flex: 1;
         }
     </style>
     <div class = "container">   
@@ -190,7 +194,9 @@
             </div>
         </div>
     </div>
-    <h2 class = "comingSoon">Coming Soon</h2>
+    <div class = "mainContent">
+        <h2 class = "comingSoon">Coming Soon</h2>
+    </div>
 
     <div class = "socials">
         <a href = "https://youtube.com/@small_j1337" target = "_blank"><img src="youtube logo.png" width = "50px" height = "auto"></a>
