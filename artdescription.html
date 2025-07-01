@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Artwork Description</title>
+</head>
+<style>
+    @font-face{
+        src: url("customFont.ttf");
+        font-family: customFont;
+    }
+    @media(max-width: 1200px){
+        .container img{
+            width: 75%;
+        }
+        .topbar{
+           margin-left: 15%;
+           margin-right: 15%;
+        }
+        h1{
+            font-size: 40pt;
+        }
+        p{
+            font-size: 15pt;
+        }
+    }
+    @media(min-width: 1201px){
+        .container img{
+            width: 40%;
+        }
+        .topbar{
+           margin-left: 30%;
+           margin-right: 30%;
+        }
+        h1{
+            font-size: 45pt;
+        }
+        p{
+            font-size: 20pt;
+        }
+    }
+    body{
+        margin: 0;
+        font-family: customFont;
+        width: 100%;
+        display: flex;
+        flex-direction : column;
+    }
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+    }
+    .container img{
+        margin: 50px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .container h1, .container p{
+        margin: 5px;
+    }
+    .topbar h1, .topbar a{
+        font-size: 25pt !important;
+        text-decoration: none;
+        color: black;
+    }
+    .topbar h1:hover{
+        text-decoration: underline;
+        cursor: pointer;
+        transform: translateY(-5px);
+    }
+
+</style>
+<body>
+    <div class = "topbar">
+        <a href = "projects.html"><h1>< Back</h1></a>
+        <img src = "icon.png" width = "50px" height = "50px">
+    </div>
+    <div class = "container" id = "artwork1">
+        <img src = "Artwork1.svg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork2">
+        <img src = "Artwork2.svg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork3">
+         <img src = "Artwork3.jpg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork4">
+         <img src = "Artwork4.jpg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork5">
+         <img src = "Artwork5.jpg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork6">
+         <img src = "Artwork6.jpg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork7">
+         <img src = "Artwork7.jpg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+    <div class = "container" id = "artwork8">
+        <img src = "Artwork8.svg">
+        <h1>Title</h1>
+        <p>Artist Statement</p>
+    </div>
+</body>
+</html>
