@@ -106,14 +106,17 @@
         .navBar ul{
             font-size: 10pt !important;
         }
+        .biography{
+            flex-direction: column !important;
+        }
         .biography img{
         width: 200px !important;
         height: 400px !important;
         animation: animate 3s forwards !important;
-    }
-    .biography p{
-        animation: animate 3s forwards !important;
-    }
+        }
+        .biography p{
+            animation: animate 3s forwards !important;
+        }
     }
     @media (max-width: 1200px){
         p{
@@ -146,6 +149,9 @@
         }
         .navBar ul{
             font-size: 15pt;
+        }
+        .biography{
+            flex-direction: column;
         }
         .biography img{
             width: 300px;
@@ -189,6 +195,9 @@
         }
         .navBar ul{
             font-size: 17pt !important;
+        }
+        .biography{
+            flex-direction: row;
         }
         .biography img{
         width: 400px;
@@ -248,7 +257,6 @@
     }
     .biography{
         display: flex;
-        flex-direction: row;
         margin: 30px;
     }
     .mainContent{
@@ -262,6 +270,9 @@
         animation-range: entry 0% cover 25%;
         margin-left: 40px;
         margin-right: 40px;
+    }
+    .biography img{
+        align-self: center;
     }
     .copyright{
         color: black;
