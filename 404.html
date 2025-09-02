@@ -15,6 +15,22 @@
             opacity: 1;
         }
     }
+    @keyframes milky-way{
+        from{
+            scale: 1.5;
+        }
+        to{
+            scale: 1;
+        }
+    }
+    @keyframes arch{
+        from{
+            scale: 3;
+        }
+        to{
+            scale: 1;
+        }
+    }
     @font-face{
         font-family: minecraft-regular;
         src: url("fonts/MinecraftRegular.otf");
@@ -31,11 +47,13 @@
         height: 100vh;
         background-color: rgb(177, 212, 254);
         position:relative;
+        display: flex;
         overflow-x: hidden;
         overflow-y: hidden;
     }
     .card{
         min-width: 300px;
+        z-index: 300;
         width: 50vw;
         max-width: 400px;
         min-height: 360px;
@@ -79,10 +97,37 @@
         background-color: rgb(0,0,0);
         color: white;
     }
+    .milky-way{
+        min-width: 1920px;
+        min-height: 1080px;
+        width: 100vw;
+        height: 56.25vw;
+        z-index: 100;
+        position: absolute;
+        display: block;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        animation: milky-way 2s forwards;
+    }
+    .arch{
+        min-width: 1920px;
+        min-height: 1080px;
+        width: 100vw;
+        height: 56.25vw;
+        z-index: 200;
+        position: absolute;
+        display: block;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        animation-delay: 1.5s;
+        animation: arch 3s forwards;
+    }
     
 
 </style>
 <body>
+    <img class = "milky-way" src = "backgrounds/milky-way.jpg">
+    <img class = "arch" src = "backgrounds/arch.png">
     <div class = "card">
         <h1>Jerry's Profile Card</h1>
         <p>@small_j1337</p>
