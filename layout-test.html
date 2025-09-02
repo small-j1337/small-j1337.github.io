@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Test</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .parent{
+        position: relative;
+        min-width: 200px;
+        min-height: 200px;
+        width: 20vw;
+        height: 20vw;
+        background-color: red;
+    }
+    .child{
+        position: absolute;
+        transform-origin: center center;
+        background-color: blue;
+        z-index: 999;
+        top: 37.5%;
+        left: 37.5%;
+        min-width: 50px;
+        min-height: 50px;
+        width: 5vw;
+        height: 5vw;
+        transition: scale 0.5s ease;
+    }
+    .child:hover{
+        scale: 1.5;
+    }
+</style>
+<body>
+    <div class = "parent">
+        <div class = "child"></div>
+    </div>
+</body>
+</html>
