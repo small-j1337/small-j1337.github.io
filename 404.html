@@ -16,17 +16,11 @@
         }
     }
     @keyframes milky-way{
-        from{
-            scale: 1.5;
-        }
         to{
             scale: 1;
         }
     }
     @keyframes arch{
-        from{
-            scale: 3;
-        }
         to{
             scale: 1;
         }
@@ -48,8 +42,7 @@
         background-color: rgb(255, 255, 255);
         position:relative;
         display: flex;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: clip;
         justify-content: center;
         align-items: center;
     }
@@ -100,30 +93,27 @@
         color: white;
     }
     .milky-way{
-        width: 100vw;
+        scale: 1.5;
         min-width: 1920px;
         min-height: 1080px;
-        height: 56.25vw;
         z-index: 100;
         position: absolute;
-        animation: milky-way 2s forwards;
+        animation: milky-way 5s forwards;
         transform: translate(-37.5% -37.5%);
         display: block;
         transform-origin: center center;
         overflow: clip;
     }
     .arch{
-        width: 100vw;
-        height: 56.25vw;
+        scale: 3;
         min-width: 1920px;
         min-height: 1080px;
         z-index: 200;
         position: absolute;
         display: block;
-        animation-delay: 1.5s;
         transform: translate(-37.5% -37.5%);
         transform-origin: center center;
-        animation: arch 3s forwards;
+        animation: arch 4.5s forwards 0.5s;
         overflow: clip;
     }
     
