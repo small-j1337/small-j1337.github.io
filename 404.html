@@ -37,14 +37,17 @@
     }
     body{
         margin: 0;
+        overflow: hidden;
+    }
+    .container{
         width: 100vw;
         height: 100vh;
         background-color: rgb(255, 255, 255);
-        position:relative;
         display: flex;
         overflow: clip;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     .card{
         min-width: 300px;
@@ -54,7 +57,7 @@
         min-height: 360px;
         height: 60vw;
         max-height: 500px;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.75);
         position: absolute;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
@@ -96,10 +99,11 @@
         scale: 1.5;
         min-width: 1920px;
         min-height: 1080px;
+        width: 100vw;
+        height: 56.25vw;
         z-index: 100;
         position: absolute;
         animation: milky-way 5s forwards;
-        transform: translate(-37.5% -37.5%);
         display: block;
         transform-origin: center center;
         clip-path: inset(0 0 0 0);
@@ -108,10 +112,11 @@
         scale: 3;
         min-width: 1920px;
         min-height: 1080px;
+        width: 100vw;
+        height: 56.25vw;
         z-index: 200;
         position: absolute;
         display: block;
-        transform: translate(-37.5% -37.5%);
         transform-origin: center center;
         animation: arch 4.5s forwards 0.5s;
         clip-path: inset(0 0 0 0);
@@ -120,16 +125,18 @@
 
 </style>
 <body>
-    <img class = "milky-way" src = "backgrounds/milky-way.jpg">
-    <img class = "arch" src = "backgrounds/arch.png">
-    <div class = "card">
-        <h1>Jerry's Profile Card</h1>
-        <p>@small_j1337</p>
-        <button class = "button" onclick = "location.assign('index.html')">My Portfolio</button>
-        <button class = "button" onclick = "location.assign('https://www.instagram.com/small_j1337/')">Instagram</button>
-        <button class = "button" onclick = "location.assign('https://www.youtube.com/@small_j1337')">YouTube Channel</button>
-        <button class = "button" onclick = "location.assign('https://garage803racing.org/')">Garage 803 Racing</button>
-        <button class = "button" onclick = "location.assign('https://sites.google.com/view/mvhsbc2m/welcome')">MVHS Bring Change to Mind</button>
+    <div class = "container">
+        <img class = "milky-way" src = "backgrounds/milky-way.jpg">
+        <img class = "arch" src = "backgrounds/arch.png">
+        <div class = "card">
+            <h1>Jerry's Profile Card</h1>
+            <p>@small_j1337</p>
+            <button class = "button" onclick = "location.assign('index.html')">My Portfolio</button>
+            <button class = "button" onclick = "location.assign('https://www.instagram.com/small_j1337/')">Instagram</button>
+            <button class = "button" onclick = "location.assign('https://www.youtube.com/@small_j1337')">YouTube Channel</button>
+            <button class = "button" onclick = "location.assign('https://garage803racing.org/')">Garage 803 Racing</button>
+            <button class = "button" onclick = "location.assign('https://sites.google.com/view/mvhsbc2m/welcome')">MVHS Bring Change to Mind</button>
+        </div>
     </div>
 </body>
 </html>
