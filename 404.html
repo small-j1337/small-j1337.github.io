@@ -51,7 +51,7 @@
     }
     .card{
         min-width: 300px;
-        z-index: 300;
+        z-index: 200;
         width: 50vw;
         max-width: 400px;
         min-height: 360px;
@@ -59,7 +59,7 @@
         max-height: 500px;
         background-color: rgba(255, 255, 255, 0.75);
         position: absolute;
-        top: 50%; left: 50%;
+        top: 60%; left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
@@ -115,12 +115,13 @@
         min-height: 1080px;
         width: 100vw;
         height: 56.25vw;
-        z-index: 200;
+        z-index: 300;
         position: absolute;
         display: block;
         transform-origin: center center;
         animation: arch 4.5s forwards 0.5s;
         clip-path: inset(0 0 0 0);
+        pointer-events: none;
     }
     
 
