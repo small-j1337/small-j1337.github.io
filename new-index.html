@@ -88,6 +88,11 @@
             width: 100vw;
             z-index: 200;
             animation: mid-ground 3s forwards 1s;
+            transition: transform 3s ease;
+        }
+        .midground.slideUp{
+            transform: translateY(0vw) !important;
+            transition: transform 3s ease;
         }
         .background{
             scale: 2;
@@ -142,8 +147,15 @@
         <h1 style = "margin: 5vw; opacity: 0.9;">Like & Follow</h1>
     </div>
     <script>
+        const midground = document.getElementById("midground");
         window.addEventListener("scroll", () => {
-            
+            const scrollY = window.scrollY;
+            if(scrollY > 100){
+                midground.classList.add('slideUp');
+            }
+            else{
+                midground.classList.remove('slideUp');
+            }
         });
     </script>
 </body>
