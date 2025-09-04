@@ -7,6 +7,127 @@
     <title>New Landing Page</title>
 </head>
 <body>
-    
+    <style>
+        @font-face{
+            font-family: customFont;
+            src: url("urban-shadow.otf");
+        }
+        @keyframes slideFromBottom{
+            from{
+                transform: translateY(2.5vw);
+            }
+            to{
+                transform: translateY(0vw);
+            }
+        }
+        @keyframes zoomOut{
+            from{
+                scale: 1.25;
+            }
+            to{
+                scale: 1;
+            }
+        }
+        @keyframes zoomOut2{
+            from{
+                scale: 3;
+            }
+            to{
+                scale: 1;
+            }
+        }
+        @keyframes fade-in{
+            from{opacity: 0;}to{opacity:1}
+        }
+        body{
+            margin: 0;
+            font-family: customFont;
+        }
+        .container{
+            position: relative;
+            width: 100vw;
+            height: 56.25vw;
+            display: flex;
+            justify-content: center;
+            overflow: clip;
+            z-index: 0;
+        }
+        .navbar{
+            display: flex;
+            position: absolute;
+            top: 0;
+            width: 50vw;
+            justify-content: space-between;
+            padding: 2vw;
+            z-index: 1000;
+        }
+        .navbar li{
+            display: inline-block;
+            font-size: 2vw;
+            color: white;
+            opacity: 0.75;
+            transition: scale 0.25s ease;
+        }
+        .navbar li:hover{
+            cursor: pointer;
+            scale: 1.25;
+            opacity: 1;
+        }
+        .foreground{
+            position: absolute;
+            width: 100vw;
+            z-index: 300;
+            animation: zoomOut 3s forwards;
+        }
+        .midground{
+            position: absolute;
+            width: 100vw;
+            z-index: 200;
+            animation: slideFromBottom 2.5s forwards;
+        }
+        .background{
+            position: fixed;
+            width: 100vw;
+            z-index: 100;
+            animation: zoomOut2 5s forwards;
+        }
+        .title{
+            position: fixed;
+            z-index: 150;
+            color: white;
+            top: 3vw;
+            font-size: 12.5vw;
+            animation: fade-in 5s forwards;
+            letter-spacing: 0.5vw;
+        }
+        .filler{
+            width: 100vw;
+            height: 5000px;
+            z-index: 999;
+            background-color: rgb(208, 234, 255);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .filler h1{
+            font-size: 5vw;
+        }
+    </style>
+    <div class = "container">
+        <nav class = "navbar">
+            <li>Home</li>
+            <li>My Projects</li>
+            <li>Community</li>
+            <li>Contact</li>
+        </nav>
+        <img class = "foreground" src = "backgrounds/jerry-and-arch.png">
+        <img class = "midground" src = "backgrounds/canyon-1.png">
+        <img class = "background" src = "backgrounds/milky-way-2.jpg">
+        <h1 class = "title">JERRY LIANG</h1>
+    </div>
+    <div class = "filler">
+        <h1 style = "margin: 5vw; opacity: 0.9;">Like & Follow</h1>
+    </div>
 </body>
 </html>
