@@ -59,14 +59,11 @@
             padding-top: 2vw;
             padding-bottom: 2vw;
             z-index: 400;
-            min-height: 20px;
-            height: 2vw;
-            max-height: 20px;
             border-bottom: 0.2vw solid white;
         }
         .navbar li{
             display: inline-block;
-            font-size: clamp(18px,2vw,28px);
+            font-size: 2.5vw;
             color: white;
             opacity: 0.75;
             transition: scale 0.25s ease;
@@ -84,6 +81,7 @@
             z-index: 300;
             animation: fore-ground 2s forwards 3s;
             pointer-events: none;
+            overscroll-behavior: none;
         }
         .midground{
             transform: translateY(40vw);
@@ -95,6 +93,7 @@
             animation: mid-ground 3s forwards 1s;
             transition: transform 3s ease;
             pointer-events: none;
+            overscroll-behavior: none;
         }
         .background{
             scale: 2;
@@ -102,6 +101,7 @@
             width: 100vw;
             z-index: 100;
             animation: back-ground 5s forwards;
+            overscroll-behavior: none;
         }
         .title{
             position: fixed;
