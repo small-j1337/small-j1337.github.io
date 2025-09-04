@@ -39,6 +39,7 @@
         body{
             margin: 0;
             font-family: customFont;
+            overscroll-behavior: none;
         }
         .container{
             position: relative;
@@ -57,6 +58,7 @@
             padding-top: 2vw;
             padding-bottom: 2vw;
             z-index: 400;
+            border-bottom: 0.2vw solid white;
         }
         .navbar li{
             display: inline-block;
@@ -103,6 +105,9 @@
             animation: fade-in 5s forwards;
             letter-spacing: 0.5vw;
             transition: opacity 1s ease;
+            text-decoration: underline;
+            text-underline-offset: 1.5vw;
+            text-decoration-color: rgb(255, 76, 106);
         }
         .title.faded{
             opacity: 0;
@@ -128,13 +133,18 @@
             <li>Community</li>
             <li>Contact</li>
         </nav>
-        <img class = "foreground" src = "backgrounds/jerry-and-arch.png">
-        <img class = "midground" src = "backgrounds/canyon-1.png">
-        <img class = "background" src = "backgrounds/milky-way-2.jpg">
+        <img class = "foreground" id = "foreground" src = "backgrounds/jerry-and-arch.png">
+        <img class = "midground" id = "midground" src = "backgrounds/canyon-1.png">
+        <img class = "background" id = "background" src = "backgrounds/milky-way-2.jpg">
         <h1 class = "title">JERRY LIANG</h1>
     </div>
     <div class = "filler">
         <h1 style = "margin: 5vw; opacity: 0.9;">Like & Follow</h1>
     </div>
+    <script>
+        window.addEventListener("scroll", () => {
+            
+        });
+    </script>
 </body>
 </html>
