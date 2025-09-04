@@ -51,6 +51,7 @@
         }
         .navbar{
             display: flex;
+            align-items: center;
             position: absolute;
             top: 0;
             width: 100vw;
@@ -58,11 +59,14 @@
             padding-top: 2vw;
             padding-bottom: 2vw;
             z-index: 400;
+            min-height: 20px;
+            height: 2vw;
+            max-height: 20px;
             border-bottom: 0.2vw solid white;
         }
         .navbar li{
             display: inline-block;
-            font-size: 2vw;
+            font-size: clamp(18px,2vw,28px);
             color: white;
             opacity: 0.75;
             transition: scale 0.25s ease;
