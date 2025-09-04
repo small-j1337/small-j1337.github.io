@@ -14,7 +14,7 @@
         }
         @keyframes mid-ground{
             to{
-                transform: translateY(10vw);
+                transform: translateY(0vw);
                 opacity: 1;
                 scale: 1;
             }
@@ -146,7 +146,7 @@
         const midground = document.getElementById("midground");
         window.addEventListener("scroll", () => {
             const scrollY = window.scrollY;
-            midground.style.top = (-scrollY/2) + "px";
+            midground.style.top = (-scrollY/3) + "px";
         });
     </script>
 </body>
