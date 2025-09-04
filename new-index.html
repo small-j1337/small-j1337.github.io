@@ -12,26 +12,20 @@
             font-family: customFont;
             src: url("urban-shadow.otf");
         }
-        @keyframes slideFromBottom{
-            from{
-                transform: translateY(2.5vw);
-            }
+        @keyframes mid-ground{
             to{
-                transform: translateY(0vw);
-            }
-        }
-        @keyframes zoomOut{
-            from{
-                scale: 1.25;
-            }
-            to{
+                transform: translateY(10vw);
+                opacity: 1;
                 scale: 1;
             }
         }
-        @keyframes zoomOut2{
-            from{
-                scale: 3;
+        @keyframes fore-ground{
+            to{
+                scale: 1;
+                opacity: 1;
             }
+        }
+        @keyframes back-ground{
             to{
                 scale: 1;
             }
@@ -53,16 +47,16 @@
             display: flex;
             justify-content: center;
             overflow: clip;
-            z-index: 0;
         }
         .navbar{
             display: flex;
             position: absolute;
             top: 0;
-            width: 50vw;
-            justify-content: space-between;
-            padding: 2vw;
-            z-index: 1000;
+            width: 100vw;
+            justify-content: space-evenly;
+            padding-top: 2vw;
+            padding-bottom: 2vw;
+            z-index: 400;
         }
         .navbar li{
             display: inline-block;
@@ -77,22 +71,28 @@
             opacity: 1;
         }
         .foreground{
+            scale: 4;
+            opacity: 0;
             position: absolute;
             width: 100vw;
             z-index: 300;
-            animation: zoomOut 3s forwards;
+            animation: fore-ground 1s forwards 2s;
         }
         .midground{
+            transform: translateY(40vw);
+            opacity: 0;
+            scale: 3;
             position: fixed;
             width: 100vw;
             z-index: 200;
-            animation: slideFromBottom 2.5s forwards;
+            animation: mid-ground 2s forwards 1s;
         }
         .background{
+            scale: 2;
             position: fixed;
             width: 100vw;
             z-index: 100;
-            animation: zoomOut2 5s forwards;
+            animation: back-ground 3s forwards;
         }
         .title{
             position: fixed;
@@ -102,6 +102,10 @@
             font-size: 12.5vw;
             animation: fade-in 5s forwards;
             letter-spacing: 0.5vw;
+            transition: opacity 1s ease;
+        }
+        .title.faded{
+            opacity: 0;
         }
         .filler{
             width: 100vw;
