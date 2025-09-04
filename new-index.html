@@ -39,6 +39,9 @@
         @keyframes fade-in{
             from{opacity: 0;}to{opacity:1}
         }
+        @keyframes fade-out{
+            from{opacity: 1;}to{opacity:0;}
+        }
         body{
             margin: 0;
             font-family: customFont;
@@ -80,7 +83,7 @@
             animation: zoomOut 3s forwards;
         }
         .midground{
-            position: absolute;
+            position: fixed;
             width: 100vw;
             z-index: 200;
             animation: slideFromBottom 2.5s forwards;
