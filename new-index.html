@@ -90,10 +90,6 @@
             animation: mid-ground 3s forwards 1s;
             transition: transform 3s ease;
         }
-        .midground.slideUp{
-            transform: translateY(0vw) !important;
-            transition: transform 3s ease;
-        }
         .background{
             scale: 2;
             position: fixed;
@@ -150,12 +146,7 @@
         const midground = document.getElementById("midground");
         window.addEventListener("scroll", () => {
             const scrollY = window.scrollY;
-            if(scrollY > 100){
-                midground.classList.add('slideUp');
-            }
-            else{
-                midground.classList.remove('slideUp');
-            }
+            midground.style.top = (-scrollY/2) + "px";
         });
     </script>
 </body>
