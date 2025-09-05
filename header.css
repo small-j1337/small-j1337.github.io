@@ -63,6 +63,9 @@
 .hamburger{
     display: none;
 }
+.mobile-overlay{
+    display: none;
+}
 @media(max-width: 770px){
     .links{
         display: none;
@@ -77,5 +80,40 @@
     }
     .hamburger:hover{
         cursor: pointer;
+    }
+    .mobile-overlay{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0,0,0,0.75);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-links{
+        color: white;
+        width: 100vw;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-links li{
+        list-style-type: none;
+        text-align: center;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        padding: 25px;
+        font-size: 35px;
+        letter-spacing: 1px;
+        font-family: urban-shadow;
+    }
+    .close{
+        background: none;
+        border: none;
+        color: white;
+        font-size: 80px;
+        margin: 10px;
+        align-self: flex-end;
     }
 }
