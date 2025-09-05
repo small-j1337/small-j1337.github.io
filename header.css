@@ -69,8 +69,13 @@
     }
     .hamburger{
         display: block;
+        background: none;
+        border: none;
         color: white;
         font-size: clamp(20px,5vw,40px);
         margin-right: 1vw;
+    }
+    .hamburger:hover{
+        cursor: pointer;
     }
 }
