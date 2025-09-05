@@ -60,3 +60,17 @@
     scale: 1.25;
     cursor: pointer;
 }
+.hamburger{
+    display: none;
+}
+@media(max-width: 770px){
+    .links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        color: white;
+        font-size: clamp(20px,5vw,40px);
+        margin-right: 1vw;
+    }
+}
