@@ -17,7 +17,6 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    overflow: clip;
 }
 .navbar{
     display: flex;
@@ -91,13 +90,13 @@
         display: flex;
         width: 100vw;
         height: 100vh;
-        position: fixed;
+        position: relative;
         background-color: rgba(0,0,0,0.75);
         z-index: 9999;
-        justify-content: center;
-        align-items: center;
     }
     .mobile-links{
+        position: absolute;
+        top: 15%;
         color: white;
         width: 100vw;
         padding: 0;
