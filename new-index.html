@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/icon.png">
+    <link rel = "stylesheet" href = "header.css">
+    <link rel = "stylesheet" href = "text-styles.css">
+    <link rel = "stylesheet" href = "footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Landing Page</title>
 </head>
 <body>
     <style>
-        @font-face{
-            font-family: customFont;
-            src: url("/fonts/urban-shadow.otf");
-        }
         @keyframes mid-ground{
             to{
                 transform: translateY(0vw);
@@ -38,40 +37,14 @@
         }
         body{
             margin: 0;
-            font-family: customFont;
             overscroll-behavior: none;
+            display: flex;
+            flex-direction: column;
         }
         .container{
-            position: relative;
-            width: 100vw;
+            /*Specify Height Here, not in CSS File*/
             height: 56.25vw;
-            display: flex;
-            justify-content: center;
             overflow: clip;
-        }
-        .navbar{
-            display: flex;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            width: 100vw;
-            justify-content: space-evenly;
-            padding-top: 1vw;
-            padding-bottom: 1vw;
-            z-index: 400;
-            border-bottom: 0.2vw solid white;
-        }
-        .navbar li{
-            display: inline-block;
-            font-size: 2.5vw;
-            color: white;
-            opacity: 0.75;
-            transition: scale 0.25s ease;
-        }
-        .navbar li:hover{
-            cursor: pointer;
-            scale: 1.25;
-            opacity: 1;
         }
         .foreground{
             scale: 4;
@@ -82,6 +55,7 @@
             animation: fore-ground 2s forwards 3s;
             pointer-events: none;
             overscroll-behavior: none;
+            overflow: clip;
         }
         .midground{
             transform: translateY(40vw);
@@ -94,6 +68,7 @@
             transition: transform 3s ease;
             pointer-events: none;
             overscroll-behavior: none;
+            overflow: clip;
         }
         .background{
             scale: 2;
@@ -102,58 +77,69 @@
             z-index: 100;
             animation: back-ground 5s forwards;
             overscroll-behavior: none;
+            overflow: clip;
         }
         .title{
             position: fixed;
             z-index: 150;
             color: white;
-            top: 3vw;
-            font-size: 12.5vw;
+            top: clamp(50px,10vw,150px);
+            font-size: 12.5vw !important;
             animation: site-title 5s forwards;
-            letter-spacing: 0.5vw;
-            transition: opacity 1s ease;
             text-decoration: underline;
             text-underline-offset: 1.5vw;
             text-decoration-color: rgb(255, 76, 106);
+            font-family: urban-shadow;
         }
-        .title.faded{
-            opacity: 0;
-        }
-        .filler{
+        .main-content-wrapper{
             width: 100vw;
-            height: 5000px;
             z-index: 999;
             background-color: rgb(208, 234, 255);
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100vh;
         }
-        .filler h1{
-            font-size: 5vw;
+        .main-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
         }
     </style>
     <div class = "container">
         <nav class = "navbar">
-            <li>Home</li>
-            <li>My Projects</li>
-            <li>Community</li>
-            <li>Contact</li>
+            <img class = "logo" src = "icon.png">
+            <div class = "links">
+                <li>Home</li>
+                <li>My Projects</li>
+                <li>Community</li>
+            </div>
         </nav>
         <img class = "foreground" id = "foreground" src = "backgrounds/jerry-and-arch.png">
         <img class = "midground" id = "midground" src = "backgrounds/canyon-1.png">
         <img class = "background" id = "background" src = "backgrounds/milky-way-2.jpg">
         <h1 class = "title">JERRY LIANG</h1>
     </div>
-    <div class = "filler">
-        <h1 style = "margin: 5vw; opacity: 0.9;">Like & Follow</h1>
+    <div class = "main-content-wrapper">
+        <div class = "main-content">
+        </div>
+        <footer class = "footer">
+            <div class = "icons">
+                <img class = "youtube-logo" src = "yt logo.svg">
+                <img class = "instagram-logo" src = "instagram logo.svg">
+            </div>
+            <p class = "copyright">© Jerry Liang 2025</p>
+        </footer>
     </div>
     <script>
         const midground = document.getElementById("midground");
         window.addEventListener("scroll",()=> {
             const scrollY = window.scrollY;
             midground.style.top = (-scrollY/3) + "px";
-        });
+        }); 
     </script>
 </body>
 </html>

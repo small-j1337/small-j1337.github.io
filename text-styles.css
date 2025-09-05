@@ -1,0 +1,18 @@
+@font-face{
+    font-family: urban-shadow;
+    src: url("fonts/urban-shadow.otf");
+}
+@font-face{
+    font-family: din-alternate;
+    src: url("fonts/DIN\ Alternate\ Regular.otf");
+    font-weight: 400;
+}
+@font-face{
+    font-family: din-alternate;
+    src: url("fonts/DINAlternate-Bold.ttf");
+    font-weight: 500;
+}
+h1{font-size: clamp(50px,8vw,120px); margin: 0;}
+h2{font-size: clamp(40px,6vw,90px); margin: 0;}
+h3{font-size: clamp(30px,4vw,60px); margin: 0;}
+p{font-size: clamp(20px,2vw,40px); margin: 0;}

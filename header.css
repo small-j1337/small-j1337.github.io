@@ -1,0 +1,62 @@
+@font-face{
+    font-family: urban-shadow;
+    src: url("fonts/urban-shadow.otf");
+}
+@font-face{
+    font-family: din-alternate;
+    src: url("fonts/DIN\ Alternate\ Regular.otf");
+    font-weight: 400;
+}
+@font-face{
+    font-family: din-alternate;
+    src: url("fonts/DINAlternate-Bold.ttf");
+    font-weight: 500;
+}
+.container{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: clip;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    justify-content: space-between;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    z-index: 400;
+    border-bottom: 0.15vw solid white;
+    height: clamp(30px,4vw,40px);
+}
+.links{
+    display: flex;
+    align-items: center;
+}
+.navbar li{
+    display: inline-block;
+    font-size: clamp(15px,2.5vw,30px);
+    color: white;
+    opacity: 0.75;
+    transition: scale 0.25s ease;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: urban-shadow;
+}
+.navbar li:hover{
+    cursor: pointer;
+    scale: 1.25;
+    opacity: 1;
+}
+.logo{
+    width: clamp(30px,4vw,60px);
+    margin-left: 1vw;
+    transition: scale 0.25s ease;
+}
+.logo:hover{
+    scale: 1.25;
+    cursor: pointer;
+}
