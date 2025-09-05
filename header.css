@@ -12,6 +12,12 @@
     src: url("fonts/DINAlternate-Bold.ttf");
     font-weight: 500;
 }
+@keyframes mobile-links{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .container{
     position: relative;
     width: 100vw;
@@ -90,13 +96,13 @@
         display: flex;
         width: 100vw;
         height: 100vh;
-        position: relative;
+        position: fixed;
         background-color: rgba(0,0,0,0.75);
         z-index: 9999;
     }
     .mobile-links{
         position: absolute;
-        top: 15%;
+        top: 20%;
         color: white;
         width: 100vw;
         padding: 0;
@@ -104,6 +110,8 @@
         flex-direction: column;
     }
     .mobile-links li{
+        opacity: 0;
+        transform: translateX(30px);
         list-style-type: none;
         text-align: center;
         border-top: 1px solid white;
@@ -112,6 +120,7 @@
         font-size: 35px;
         letter-spacing: 1px;
         font-family: urban-shadow;
+        animation: mobile-links 0.25s forwards;
     }
     .close{
         background: none;
