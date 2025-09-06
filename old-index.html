@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jerry's Portfolio</title>
+<link rel="icon" type="image/x-icon" href="/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    @keyframes animate{
+        from{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes animateFromLeft{
+        from{
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes animateFromRight{
+        from{
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @font-face {
+        font-family: heading;
+        src: url("/fonts/DINAlternate-Bold.ttf");
+    }
+    @font-face{
+        font-family: description;
+        src: url("/fonts/DIN\ Alternate\ Regular.otf");
+    }
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid white;
+        opacity: 80%;
+    }
+    .navBar ul{
+        list-style: none;
+    }
+    .navBar li{
+        display: inline-block;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        text-decoration: none;
+    }
+    .navBar:hover{
+        opacity: 100%;
+    }
+    a{
+        text-decoration: none;
+        font-family: description !important;
+    }
+    button{
+        transition: background-color 0.2s linear !important;
+    }
+    button:hover{
+        background-color: rgb(62, 180, 210);
+    }
+    @media (max-width: 770px){
+        p{
+            font-size: 3.5vw !important;
+        }
+        h3{
+            margin-bottom: 0;
+            font-size: 15px!important;
+            margin-top: 0;
+        }
+        h2{
+        margin-bottom: 0;
+        font-size: 22px!important;
+        margin-top: 0;
+        }
+        h1{
+            margin-top: 0;
+            font-size: 30px !important;
+            margin-bottom: 25px;
+        }
+        .aboutMe{
+            margin-left: 5vw;
+            animation: animate 2.5s forwards;
+        }
+        button{
+            background: none;
+            font-size: 12pt !important;
+            padding: 1.5vw;
+            border: 0.5vw solid white;
+            cursor: pointer;
+        }
+        .navBar li{
+            font-size: 3vw !important;
+        }
+        .biography{
+            flex-direction: column !important;
+        }
+        .biography img{
+        width: 200px !important;
+        height: 400px !important;
+        animation: animate 3s forwards !important;
+        }
+        .biography p{
+            animation: animate 3s forwards !important;
+        }
+    }
+    @media (min-width: 771px){
+        p{
+            font-size: 1.5vw;
+        }
+         h3{
+            margin-bottom: 0;
+            font-size: 75px;
+            margin-top: 0;
+        }
+        h2{
+        margin-bottom: 0;
+        font-size: 5.5vw;
+        }
+        h1{
+            margin-top: 0;
+            font-size: 7vw;
+            margin-bottom: 25px;
+        }
+        .aboutMe{
+            margin: 3vw;
+            animation: animate 2.5s forwards;
+        }
+        button{
+        background: none;
+        font-size: 2vw;
+        padding: 20px;
+        border: 0.5vw solid white;
+        cursor: pointer;
+        }
+        .navBar li{
+            font-size: 1.5vw !important;
+        }
+        .biography{
+            flex-direction: row;
+        }
+        .biography img{
+        width: 30vw;
+        height: 60vw;
+        animation: animateFromLeft linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 25%;
+        }
+        .biography p{
+        color: black;
+        animation: animateFromRight linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 25%;
+        }
+        .logo{
+            width: 3vw !important;
+            margin-left: 1vw !important;
+        }
+    }
+    *{
+        font-family: heading;
+        color: white;
+    }
+    .subContainer{
+        align-items: center;
+        align-content: center;
+        flex: 1;
+    }
+    .logo{
+        margin-left: 1vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 6vw;
+    }
+    .container{
+        background-image: linear-gradient(to right,rgba(0,0,0,0.75),rgba(0,0,0,0)), url("/backgrounds/heroBanner.svg");
+        aspect-ratio: 4/3;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        cursor: url('/cursor-icon.png'), auto !important;
+    }
+    .socials{
+        display: flex;
+        justify-content: center;
+    }
+    .socials img{
+        margin: 30px 15px 15px 15px;
+        cursor: pointer;
+    }
+    .socials img:hover{
+        transform: translateY(-5px);
+    }
+    .biography{
+        display: flex;
+        margin: 30px;
+    }
+    .mainContent{
+        flex: 1;
+    }
+    .biography p{
+        color: black;
+        font-family: description;
+        animation: animateFromRight linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 25%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .biography img{
+        align-self: center;
+    }
+    .copyright{
+        color: black;
+        font-size: 9pt;
+        margin-top: 0;
+        align-self: center;
+        text-justify: flex-end;
+        font-family: description !important;
+    }
+    .whoAmI{
+        justify-items: center;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("/aboutMeBanner.png");
+        aspect-ratio: 5/1;
+        width: 100%;
+        background-size: 100% 100%;
+        margin: 0;
+        align-content: center;
+    }
+    .whoAmI h2{
+        color: rgba(230, 230, 230, 0.754);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.25);
+        padding: 10px;
+        border-radius: 5px;
+        animation: animate 3s forwards;
+        text-align: center;
+    }
+    .links li:hover{
+        transform: translateY(-2.5px);
+        text-decoration: underline;
+    }
+    .logo:hover{
+        transform: translateY(-5px);
+    }
+    .bio-paragraphs{
+        display: flex;
+        flex-direction: column;
+    }
+    .bio-paragraphs p{
+        background-color:rgb(219, 248, 255);
+        padding: 4vw;
+    }
+</style>
+<body>
+    <div class = "container">   
+        <div class = "navBar">
+            <a href = "/"><img class = "logo" src = "/icon.png"></a>
+            <ul class = "links">
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/projects/">Projects</a></li>
+                <li><a href = "/community/">Community</a></li>
+            </ul>
+        </div>
+        <div class = "subContainer">
+            <div class = "aboutMe">
+                <h2>I Am</h2>
+                <h1>Jerry Liang</h1>
+                <button><a href = "/projects/">My Projects</a></button>
+            </div>
+        </div>
+    </div>
+    <div class = "whoAmI">
+        <h2>Who Am I?</h2>
+    </div>
+    <div class = "mainContent">
+        <div class = "biography">
+            <img src = "/bio.png">
+            <div class = "bio-paragraphs">
+            <p>I am Jerry Liang and I am a Chinese-American who lives in the Bay Area with my parents and my younger brother Jason. I am currently a rising senior in Mountain View High School, and a proud member of some of my school clubs, such as the Bring Change to Mind club, and the Garage 803 Racing solar car club, as well as some programs outside of school. </p><p>
+
+            One of my biggest core values and passions is art, as I see myself as a visual learner. Since I really enjoy creating illustrations, I wanted to take this a step further by helping out my community. I have created social media posts for my school clubs, and helped the Garage 803 Racing club improve their website through learning HTML. All of the work that I have done has motivated me to code my own website by hand, where I can showcase all of my art and involvement in the community. Another aspect of art I really enjoy is playing Minecraft, as that has also been a big part of my life. What I really enjoy about the game is that it has no rules or limitations, meaning you can use their vast-variety of building blocks to create any kind of structure you want. Recently, I played with my friend group where we each built our own town or empire, while collaborating in the process to help each other get resources. </p><p>
+
+            Of course, I cannot forget my value for mental health. At school, I see a lot of people taking hard classes, as they face pressures from social expectations. As a member of the school’s Bring Change to Mind club and the Ambassadors program, my goals are to plan and lead the activities in order to bring people together. Aside from joining clubs, I help my peers by creating my own practice tests and posting them on Instagram, along with other school-themed posts. My goal for this is to make others know that they aren’t alone and someone is there for them. 
+
+            </p><p>Because I’m a visual and hands-on learner who is into art and building, I like to learn new concepts through watching videos or hands-on building activities. Since my parents remodeled my house from scratch, I got to witness the building process, which motivated me to join the COSMOS summer program, and the solar car club at my school. Through these experiences, I learned how to use power tools, building concepts, as well as collaborating with others to get our feet wet with real world applications and problem solving skills. Along with that, I created a YouTube channel, where I showcase some projects that I made (link at the bottom of this page).
+            </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "socials">
+        <a href = "https://youtube.com/@small_j1337" target = "_blank"><img src="/youtube logo.png" width = "50px" height = "auto"></a>
+        <a href = "https://instagram.com/small_j1337" target = "_blank"><img src="/instagram logo.png" width="35px" height = "auto"></a>
+    </div>
+    <p class = "copyright">&copy Jerry Liang 2025</p>
+
+</body>
+</html>
