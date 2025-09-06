@@ -30,11 +30,18 @@
 }
 .instagram-logo{
     width: clamp(20px,4vw,24px);
-    margin-left: 20px;
-    margin-right: 20px;
 }
 .youtube-logo{
     width: clamp(30px,6vw,36px);
+}
+.footer button{
+    background: none;
+    border: none;
+    transition: transform 0.25s ease;
     margin-left: 20px;
     margin-right: 20px;
+}
+.footer button:hover{
+    transform: translateY(-0.5vw);
+    cursor: pointer;
 }

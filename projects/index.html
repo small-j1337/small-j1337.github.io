@@ -77,6 +77,10 @@
         margin-top: 2vw;
         border-radius: 1vw;
         min-width: 100px;
+        transition: transform 0.25s ease;
+    }
+    .gallery img:hover{
+        transform: translateY(-1vw);
     }
     @media(max-width: 770px){
         .gallery{
@@ -127,8 +131,8 @@
         </div>
         <footer class = "footer">
             <div class = "icons">
-                <img class = "youtube-logo" src = "/yt logo.svg">
-                <img class = "instagram-logo" src = "/instagram logo.svg">
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/instagram logo.svg"></button>
             </div>
             <p class = "copyright">© Jerry Liang 2025</p>
         </footer>
