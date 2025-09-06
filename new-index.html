@@ -113,18 +113,19 @@
     <div class = "mobile-overlay" id = "mobile-overlay">
         <ul class = "mobile-links">
             <button class = "close" id = "close" onclick = "document.body.classList.remove('noScroll'); document.getElementById('mobile-overlay').classList.remove('show') ">&times</button>
-            <li>Home</li>
-            <li>My Projects</li>
-            <li>Community</li>
+            <li><a href = "/">Home</a></li>
+            <li><a href = "/projects/">My Projects</a></li>
+            <li><a href = "/community/">Community</a></li>
+            
         </ul>
     </div>
     <div class = "container">
         <nav class = "navbar">
             <img class = "logo" src = "icon.png">
             <div class = "links">
-                <li>Home</li>
-                <li>My Projects</li>
-                <li>Community</li>
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/projects/">My Projects</a></li>
+                <li><a href = "/community/">Community</a></li>
             </div>
             <button class = "hamburger" id = "hamburger" onclick = "document.body.classList.add('noScroll'); document.getElementById('mobile-overlay').classList.add('show') ">☰</button>
         </nav>
