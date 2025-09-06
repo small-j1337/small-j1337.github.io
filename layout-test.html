@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>Image Icon Lab</title>
 </head>
 <style>
     body{
         width: 100vw;
         height: 100vh;
+        background-color: rgb(80, 226, 214);
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
-    .parent{
-        width: 500px;
-        height: 500px;
-        background-color: rgb(255, 85, 85);
+    .icon{
+        width: clamp(100px,10vw,200px);
+        height: clamp(100px,10vw,200px);
+        position: relative;
+        overflow: clip;
+        display: flex;
     }
-    .child{
-        width: 100px;
-        height: 100px;
-        transition: scale 0.5s ease;
-        background-color: rgb(255, 136, 136);
+    .icon img{
+        width: 100%;
+        position: absolute;
+        display: flex;
+        transition: scale 0.25s ease;
     }
-    .child:hover{
-        scale: 5;
+    .icon img:hover{
+        scale: 1.1;
+        cursor: pointer;
+    }
+    .icon h1{
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        pointer-events: none;
+        font-family: sans-serif;
+        margin: 0;
+        height: 2vw;
+        background-color: rgba(0,0,0,0.5);
     }
 </style>
 <body>
-    <div class = "parent">
-        <div class = "child"></div>
-    </div>
+   <div class = "icon">
+        <img src = "sample-icon.jpeg">
+        <h1>My Icon</h1>
+   </div>
 </body>
 </html>
