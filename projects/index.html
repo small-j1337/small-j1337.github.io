@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/icon.png">
     <link rel = "stylesheet" href = "/header.css">
     <link rel = "stylesheet" href = "/text-styles.css">
@@ -11,6 +10,9 @@
     <title>My Portfolio</title>
 </head>
 <style>
+     @keyframes site-title{
+        from{opacity: 0;}to{opacity:0.8}
+    }
     body{
         margin: 0;
         overscroll-behavior: none;
@@ -21,7 +23,7 @@
     .container{
         width: 100vw;
         height: 40vw;
-        background-image: url("/projectBanner.jpg");
+        background-image: linear-gradient(to right, rgba(0,0,0,0.75),rgba(0,0,0,0)),url("/projectBanner.jpg");
         background-position: center center;
         background-attachment: fixed;
         background-size: cover;
@@ -32,7 +34,7 @@
         color: white;
         top: 15vw;
         font-size: 10vw !important;
-        animation: site-title 5s forwards;
+        animation: site-title 2.5s forwards;
         text-decoration: underline;
         text-underline-offset: 1.5vw;
         text-decoration-color: rgb(255, 76, 106);
