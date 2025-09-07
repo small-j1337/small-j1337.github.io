@@ -43,5 +43,5 @@
 }
 .footer button:hover{
     transform: translateY(-0.5vw);
-    cursor: pointer;
+    cursor: url('/cursor-icon.png'), auto !important;
 }

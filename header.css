@@ -44,6 +44,7 @@
 .links a{
     text-decoration: none;
     color: white;
+    cursor: url('/cursor-icon.png'), auto !important;
 }
 .navbar li{
     display: inline-block;
@@ -56,7 +57,7 @@
     font-family: urban-shadow;
 }
 .navbar li:hover{
-    cursor: pointer;
+    cursor: url('/cursor-icon.png'), auto !important;
     scale: 1.25;
     opacity: 1;
 }
@@ -67,7 +68,7 @@
 }
 .logo:hover{
     scale: 1.25;
-    cursor: pointer;
+    cursor: url('/cursor-icon.png'), auto !important;
 }
 .hamburger{
     display: none;
@@ -91,7 +92,7 @@
         margin-right: 1vw;
     }
     .hamburger:hover{
-        cursor: pointer;
+        cursor: url('/cursor-icon.png'), auto !important;
     }
     .mobile-overlay{
         display: none;
