@@ -54,7 +54,7 @@
     transition: scale 0.25s ease;
     margin-left: 2vw;
     margin-right: 2vw;
-    font-family: urban-shadow;
+    font-family: urban-shadow, sans-serif;
 }
 .navbar li:hover{
     cursor: url('/cursor-icon.png'), auto !important;
@@ -124,7 +124,7 @@
         padding: 25px;
         font-size: 35px;
         letter-spacing: 1px;
-        font-family: urban-shadow;
+        font-family: urban-shadow, sans-serif;
         animation: mobile-links 0.25s forwards;
     }
     .mobile-links a{
