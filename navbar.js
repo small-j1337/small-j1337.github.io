@@ -1,5 +1,4 @@
-const menuOption = document.getElementById("menu-option");
-const navBar = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger");
 window.addEventListener("scroll",()=> {
     const scrollY = window.scrollY;
     if(scrollY > 1){
@@ -9,6 +8,8 @@ window.addEventListener("scroll",()=> {
         document.querySelectorAll(".menu-option").forEach(function(el) {
         el.classList.add("scroll");
         });
+        hamburger.classList.add('scroll');
+        
     }
     else{
        document.querySelectorAll(".navbar").forEach(function(el) {
@@ -17,5 +18,6 @@ window.addEventListener("scroll",()=> {
         document.querySelectorAll(".menu-option").forEach(function(el) {
         el.classList.remove("scroll");
         });
+        hamburger.classList.remove('scroll');
     }
 }); 

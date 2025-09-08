@@ -106,6 +106,9 @@
         font-size: clamp(20px,5vw,40px);
         margin-right: 1vw;
     }
+    .hamburger.scroll{
+        color: black;
+    }
     .hamburger:hover{
         cursor: url('/cursor-icon.png'), auto !important;
     }
