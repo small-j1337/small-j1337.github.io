@@ -35,6 +35,16 @@
         @keyframes fade-out{
             from{opacity: 1;}to{opacity:0;}
         }
+        @keyframes grid-item{
+            from{
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
         body{
             margin: 0;
             overscroll-behavior: none;
@@ -123,6 +133,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            animation: grid-item 1s linear;
+            animation-timeline: view();
+            animation-range: entry 10% cover 20%;
         }
         .grid-item img{
             width: 100%;
@@ -135,6 +148,17 @@
             font-family: din-alternate;
             width: 80%;
             text-align: center;
+        }
+        @media(max-width: 770px){
+            .grid-container{
+                width: 100vw;
+            }
+            .grid-item{
+                width: 30%;
+            }
+            .grid-item p{
+                font-size: 3.5vw;
+            }
         }
     </style>
     <div class = "mobile-overlay" id = "mobile-overlay">
