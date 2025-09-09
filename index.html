@@ -149,6 +149,20 @@
             width: 80%;
             text-align: center;
         }
+        #center-picture:hover{
+            cursor: url('/cursor-icon.png'), auto !important;
+        }
+        .damage-overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,0,0,0.5);
+            opacity: 0;
+            transition: opacity 0.1s ease;
+        }
+        .damage-overlay.show{
+            opacity: 1;
+        }
         @media(max-width: 770px){
             .grid-container{
                 width: 100vw;
@@ -192,7 +206,7 @@
                 <div class = "grid-item" style = "background-color: rgb(20, 66, 94)"><p>Frontend Website Developer</p></div>
                 <div class = "grid-item"><img src = "/index-grid/image-5.png"></div>
                 <div class = "grid-item" style = "background-color: rgb(33, 101, 144)"><p>Artist</p></div>
-                <div class = "grid-item"><img src = "/index-grid/image-1.jpg"></div>
+                <div class = "grid-item" id = "center-picture"><audio id="damage-sound" src="/sounds/minecraft-damage.mp3" preload="auto"></audio><img src = "/index-grid/image-1.jpg"><div class = "damage-overlay"></div></div>
                 <div class = "grid-item"><img src = "/index-grid/image-3.jpg"></div>
                 <div class = "grid-item" style = "background-color: rgb(34, 149, 162)"><p>Leader</p></div>
                 <div class = "grid-item"><img src = "/index-grid/image-4.jpg"></div>
@@ -214,6 +228,32 @@
             const scrollY = window.scrollY;
             midground.style.top = (-scrollY/3) + "px";
         }); 
+    </script>
+    <script>
+        let damageCount = 0;
+        const centerImage = document.getElementById("center-picture");
+        const damageSound = document.getElementById("damage-sound");
+        const damageOverlay = document.querySelector(".damage-overlay");
+
+        function showMessage(){
+            alert("Be Nice to Jerry.");
+        }
+
+        centerImage.addEventListener('click',()=>{
+            damageSound.currentTime = 0;
+            damageSound.play();
+            damageOverlay.classList.add('show');
+            damageCount = damageCount + 1;
+            console.log(damageCount);
+
+             setTimeout(() => {
+                damageOverlay.classList.remove('show');
+            }, 250);
+
+            if(damageCount === 10){
+                showMessage();
+            }
+        });
     </script>
     <script src = "/navbar.js"></script>
 </body>
