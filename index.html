@@ -94,20 +94,39 @@
         }
         .main-content-wrapper{
             width: 100vw;
+            height: 200vw;
             z-index: 900;
             background-color: rgb(225, 240, 240);
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
         }
         .main-content{
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+        .grid-container{
+            display: flex;
+            align-items: center;
             justify-content: center;
-            flex: 1;
+            flex-wrap: wrap;
+            width: 90vw;
+            margin-top: 5vw;
+        }
+        .grid-item{
+            position: relative;
+            width: 25%;
+            margin: 0.5vw;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid-item img{
+            width: 100%;
+            position: absolute;
         }
     </style>
     <div class = "mobile-overlay" id = "mobile-overlay">
@@ -136,6 +155,18 @@
     </div>
     <div class = "main-content-wrapper">
         <div class = "main-content">
+            <div class = "grid-container">
+                <div class = "grid-item"><img src = "/index-grid/image-2.jpg"></div>
+                <div class = "grid-item" style = "background-color: rgb(20, 66, 94)"></div>
+                <div class = "grid-item"><img src = "/index-grid/image-5.png"></div>
+                <div class = "grid-item" style = "background-color: rgb(33, 101, 144)"></div>
+                <div class = "grid-item"><img src = "/index-grid/image-1.jpg"></div>
+                <div class = "grid-item"><img src = "/index-grid/image-3.jpg"></div>
+                <div class = "grid-item" style = "background-color: rgb(34, 149, 162)"></div>
+                <div class = "grid-item"><img src = "/index-grid/image-4.jpg"></div>
+                <div class = "grid-item" style = "background-color: rgb(66, 108, 232)"></div>
+                
+            </div>
         </div>
         <footer class = "footer">
             <div class = "icons">
