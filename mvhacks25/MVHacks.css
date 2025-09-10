@@ -1,0 +1,39 @@
+@font-face {
+    font-family: headerFont;
+    src: url("SmallJStudio-Regular.ttf");
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+#myCanvas{
+    width: 90%;
+    align-self: center;
+    border-radius: 5px;
+}
+head {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: headerFont;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    font-family: headerFont;
+}
+#infoText{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    z-index: 1;
+}
