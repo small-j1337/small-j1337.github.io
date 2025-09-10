@@ -2,6 +2,8 @@
 const canvas = document.getElementById('myCanvas');
 const deathSound = document.getElementById('deathSound');
 const jumpSound = document.getElementById('jumpSound');
+const fireSound = document.getElementById('fire');
+const waterSound = document.getElementById('water');
 const ctx = canvas.getContext('2d');
 const keys = {};
 const objects = [];
@@ -69,7 +71,7 @@ const Player = {
         ctx.fillRect(this.x, this.y, this.size, this.size);
     },
     jump: function () {
-        if (this.onGround) {
+        if (this.onGround && Player.score < targetScore) {
             this.velocityY = -10;
              jumpSound.currentTime = 0;
             jumpSound.play();
@@ -249,7 +251,7 @@ function gameLoop() {
 
     infoText.innerText = "Score: " + Player.score + "/" + targetScore + " Deaths: " + Player.deaths +  ", A - Move left, D - Move right, W - Jump, Space - Shoot water, Arrow keys - Change direction of shooting water ";
 
-    if (Player.y >= canvas.getAttribute("height")) {
+    if (Player.y >= canvas.getAttribute("height") && Player.score < targetScore) {
         Player.die();
         deathSound.currentTime = 0;
         deathSound.play();
@@ -265,7 +267,7 @@ function gameLoop() {
         if (!fire.dead){
             fire.draw();
         }
-        if (fire.playerCollide(Player) && Player.damageable) {
+        if (fire.playerCollide(Player) && Player.damageable && Player.score < targetScore) {
             Player.die();
             deathSound.currentTime = 0;
             deathSound.play();
@@ -288,6 +290,8 @@ function gameLoop() {
                 Player.score += 1;
                 fire.die();
                 deleteFromArray(fire, fires);
+                fireSound.currentTime = 0;
+                fireSound.play();
             }
         }
         for (const platform of platforms) {
@@ -321,10 +325,11 @@ document.addEventListener('keydown', (event) => {
     keys[event.key] = true;
 
     // Handle water shooting
-    if (event.key === ' ') {
+    if (event.key === ' ' && Player.score < targetScore) {
         const water = new Water(Player.x, Player.y, Player.direction);
         waterProjectiles.push(water);
-        
+        waterSound.currentTime = 0;
+        waterSound.play();
     }
 
     if (event.key === 'ArrowRight') {
