@@ -24,11 +24,7 @@
                 opacity: 1;
             }
         }
-        @keyframes back-ground{
-            to{
-                scale: 1;
-            }
-        }
+       
         @keyframes site-title{
             from{opacity: 0;}to{opacity:0.8}
         }
@@ -45,6 +41,11 @@
                 opacity: 1;
             }
         }
+        @keyframes back-ground{
+            to{
+                background-size: 100vw 56.25vw;
+            }
+        }
         body{
             margin: 0;
             overscroll-behavior: none;
@@ -55,6 +56,11 @@
         .container{
             /*Specify Height Here, not in CSS File*/
             height: 56.25vw;
+            background-image: url("backgrounds/milky-way-2.jpg");
+            background-size: 200vw 112.5vw;
+            animation: back-ground 5s forwards;
+            background-position: center top;
+            background-attachment:fixed;
             overflow: clip;
         }
         .foreground{
@@ -72,21 +78,12 @@
             transform: translateY(40vw);
             opacity: 0;
             scale: 3;
-            position: fixed;
+            position: absolute;
             width: 100vw;
             z-index: 200;
             animation: mid-ground 3s forwards 1s;
             transition: transform 3s ease;
             pointer-events: none;
-            overscroll-behavior: none;
-            overflow: clip;
-        }
-        .background{
-            scale: 2;
-            position: fixed;
-            width: 100vw;
-            z-index: 100;
-            animation: back-ground 5s forwards;
             overscroll-behavior: none;
             overflow: clip;
         }
@@ -104,7 +101,6 @@
         }
         .main-content-wrapper{
             width: 100vw;
-            height: 200vw;
             z-index: 900;
             background-color: rgb(225, 240, 240);
             position: relative;
@@ -196,7 +192,6 @@
         </nav>
         <img class = "foreground" id = "foreground" src = "backgrounds/jerry-and-arch.png">
         <img class = "midground" id = "midground" src = "backgrounds/canyon-1.png">
-        <img class = "background" id = "background" src = "backgrounds/milky-way-2.jpg">
         <h1 class = "title">JERRY LIANG</h1>
     </div>
     <div class = "main-content-wrapper">
@@ -226,7 +221,7 @@
         const midground = document.getElementById("midground");
         window.addEventListener("scroll",()=> {
             const scrollY = window.scrollY;
-            midground.style.top = (-scrollY/3) + "px";
+            midground.style.top = (scrollY/2) + "px";
         }); 
     </script>
     <script>
