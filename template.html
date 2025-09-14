@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+    <link rel = "stylesheet" href = "/header.css">
+    <link rel = "stylesheet" href = "/text-styles.css">
+    <link rel = "stylesheet" href = "/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            overscroll-behavior: none;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .container{
+            /*Specify Height Here, not in CSS File*/
+            height: 56.25vw;
+            background-size: 200vw 112.5vw;
+            animation: back-ground 5s forwards;
+            background-position: center top;
+            background-attachment:fixed;
+            overflow: clip;
+            background-color: rgb(15, 111, 111);
+        }
+        .main-content-wrapper{
+            width: 100vw;
+            z-index: 900;
+            background-color: rgb(225, 240, 240);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <div class = "mobile-overlay" id = "mobile-overlay">
+        <ul class = "mobile-links">
+            <button class = "close" id = "close" onclick = "document.body.classList.remove('noScroll'); document.getElementById('mobile-overlay').classList.remove('show') ">&times</button>
+            <li><a href = "/">Home</a></li>
+            <li><a href = "/projects/">My Projects</a></li>
+            <li><a href = "/community/">Community</a></li>
+            
+        </ul>
+    </div>
+    <div class = "container">
+        <nav class = "navbar" id = "navbar">
+            <button class = "logo-button" onclick = "location.assign('/')"><img class = "logo" src = "/icon.png"></button>
+            <div class = "links">
+                <li><a class = "menu-option" id = "menu-option" href = "/">Home</a></li>
+                <li><a class = "menu-option" id = "menu-option" href = "/projects/">My Projects</a></li>
+                <li><a class = "menu-option" id = "menu-option" href = "/community/">Community</a></li>
+            </div>
+            <button class = "hamburger" id = "hamburger" onclick = "document.body.classList.add('noScroll'); document.getElementById('mobile-overlay').classList.add('show') ">☰</button>
+        </nav>
+    </div>
+    <div class = "main-content-wrapper">
+        
+        <footer class = "footer">
+            <div class = "icons">
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/logos/instagram logo.svg"></button>
+            </div>
+            <p class = "copyright">© Jerry Liang 2025</p>
+        </footer>
+    </div>
+</body>
+<script src = "/navbar.js"></script>
+</html>
