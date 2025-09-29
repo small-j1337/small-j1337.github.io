@@ -1,16 +1,20 @@
 @font-face{
     font-family: urban-shadow;
-    src: url("fonts/urban-shadow.otf");
+    src: url("/fonts/urban-shadow.otf");
 }
 @font-face{
     font-family: din-alternate;
-    src: url("fonts/DIN\ Alternate\ Regular.otf");
+    src: url("/fonts/DIN\ Alternate\ Regular.otf");
     font-weight: 400;
 }
 @font-face{
     font-family: din-alternate;
-    src: url("fonts/DINAlternate-Bold.ttf");
+    src: url("/fonts/DINAlternate-Bold.ttf");
     font-weight: 500;
+}
+@font-face{
+    font-family: poxast;
+    src: url("/fonts/Poxast.ttf")
 }
 h1{font-size: clamp(50px,8vw,120px); margin: 0;}
 h2{font-size: clamp(40px,6vw,90px); margin: 0;}
