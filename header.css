@@ -63,7 +63,7 @@
     cursor: url('/cursor-icon.png'), auto !important;
 }
 .menu-option.scroll{
-    color: black;
+    color: rgb(39, 43, 53);
 }
 
 .navbar li{
