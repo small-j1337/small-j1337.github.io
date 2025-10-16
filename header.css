@@ -43,7 +43,7 @@
     padding-top: 1vw;
     padding-bottom: 1vw;
     z-index: 400;
-    background-color: rgb(242, 92, 109);
+    background-color: rgb(66, 100, 185);
     /* rgb(65, 103, 156) */
     height: clamp(30px,4vw,40px);
     transition: background-color 0.5s ease;
