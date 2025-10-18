@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/footer.css">
+    <title>Jerry's Portfolio - Calc S1 M2</title>
+</head>
+<style>
+    @font-face{
+        font-family: jost;
+        src: url("/fonts/Jost-VariableFont_wght.ttf");
+    }
+    header{
+        font-family: jost;
+        width: 50%;
+        min-width: 400px;
+        padding: 10px;
+        font-size: clamp(20px,4vw,35px);
+    }
+    .back{
+        color: black;
+        text-decoration: none;
+        transition: color 0.25s ease;
+        font-weight: 500;
+    }
+    .back:hover{
+        color: rgb(49, 159, 199);
+        cursor: pointer;
+    }
+    body{
+        width: 100vw;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overscroll-behavior:none;
+    }
+    html{
+        overscroll-behavior: none;
+    }
+    .my-pdf{
+        width: 50%;
+        min-width: 400px;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <header>
+    <a class = "back" href = "/practice-sets/"> < Back </a>
+    </header>   
+    <iframe class = "my-pdf" src = "practice-set.pdf#toolbar=0&navpanes=0"></iframe>
+     <footer class = "footer">
+            <div class = "icons">
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/logos/instagram logo.svg"></button>
+            </div>
+            <p class = "copyright">© Jerry Liang 2025</p>
+    </footer>
+</body>
+</html>
