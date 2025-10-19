@@ -1,92 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/icon.png">
-    <link rel = "stylesheet" href = "/header.css">
-    <link rel = "stylesheet" href = "/text-styles.css">
-    <link rel = "stylesheet" href = "/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerry's Portfolio - Practice</title>
+    <title>small_j1337 Calc Resource Hub</title>
 </head>
+<style>
+    @font-face{font-family: poxast; src: url("/fonts/Poxast.ttf");}
+    @font-face{font-family: jost; src: url("/fonts/Jost-VariableFont_wght.ttf");}
+    body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(221,242,245);
+    }
+    .content-wrapper{
+        width: 100vw;
+        max-width: 1024px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .header-content{
+        height: clamp(75px,5vw,100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-content{
+        flex: 1;
+    }
+    .footer-content{
+        height: 150px;
+    }
+    .section{
+        margin: 10px;
+        border: 2.5px solid rgb(24, 29, 34);
+        border-radius: 10px;
+        background-color: rgb(202,232,234);
+        box-shadow: 5px 5px 0px 1px rgb(24, 29, 34);
+    }
+    .logo-and-name{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        transition: transform 0.25s ease;
+    }
+    .logo-and-name:hover{
+        transform: translateY(-5px);
+    }
+    .icon{
+        width: 50px;
+        margin: 10px;
+    }
+    .username{
+        font-family: poxast;
+        font-size: 15px;
+    }
+    .header-icons{display: flex; align-items: center; margin-right: 10px;}
+    .header-icons button{
+        width: 50px;
+        background: none;
+        border: none;
+        margin: 5px;
+        transition: transform 0.25s ease;
+    }
+    .header-icons button:hover{
+        cursor: pointer;
+        transform: translateY(-5px);
+    }
+    .ig{
+        width: 45px !important;
+    }
+    .footer-icons{
+        display: flex;
+        justify-content: center;
+        margin: 20px 20px 0px 20px;
+    }
+    .footer-icons button{
+        width: 50px;
+        background: none;
+        border: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyright{
+        font-family: jost;
+    }
+    .footer-youtube-logo{
+        width: 50px;
+    }
+    @media(max-width: 768px){
+        .logo-and-name h1{
+            display: none;
+        }
+    }
+</style>
 <body>
-    <style>
-        body{
-            margin: 0;
-            overscroll-behavior: none;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .container{
-            /*Specify Height Here, not in CSS File*/
-            
-            background-size: 200vw 112.5vw;
-            animation: back-ground 5s forwards;
-            background-position: center top;
-            background-attachment:fixed;
-            overflow: clip;
-        }
-        .main-content-wrapper{
-            width: 100vw;
-            min-height: 100vh;
-            z-index: 900;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-image: url("/backgrounds/practice-set-pattern.svg");
-            background-size: cover;
-            background-position: center center;
-        }
-        .navbar{
-            position: fixed;
-            box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.25);
-            z-index: 999;
-        }
-        .links a{
-            color: rgb(255, 255, 255) !important;
-        }
-        .hamburger{
-            color: rgb(255, 255, 255) !important;
-        }
-        .practice-sets-wrapper{
-            width: 95vw;
-            max-width: 1000px;
-            margin-top: clamp(60px,20vw,100px);
-            flex: 1;
-            border-radius: 5px;
-        }
-        .copyright{
-            color: white;
-        }
-    </style>
-    <div class = "mobile-overlay" id = "mobile-overlay">
-        <ul class = "mobile-links">
-            <button class = "close" id = "close" onclick = "document.body.classList.remove('noScroll'); document.getElementById('mobile-overlay').classList.remove('show') ">&times</button>
-            <li><a href = "/">Home</a></li>
-            <li><a href = "/projects/">My Projects</a></li>
-            <li><a href = "/community/">Community</a></li>
-            
-        </ul>
-    </div>
-    <div class = "container">
-        <nav class = "navbar" id = "navbar">
-            <button class = "logo-button" onclick = "location.assign('/')"><img class = "logo" src = "/icon.png"></button>
-            <div class = "links">
-                <li><a class = "menu-option" id = "menu-option" style = "text-decoration: underline; text-underline-offset: 3px;"href = "/">Main Website</a></li>
+    <div class = "content-wrapper">
+        <header class = "header-content section">
+            <a href = "/" class = "logo-and-name">
+                <img class = "icon" src = "/icon.png">
+                <h1 class = "username">small_j1337</h1>
+            </a>
+            <div class = "header-icons">
+                <button class = "home"><img src = "/logos/home-icon.svg"></button>
+                <button class = "yt"><img src = "/logos/yt logo.svg"></button>
+                <button class = "ig"><img src = "/logos/instagram logo.svg"></button>
             </div>
-            <button class = "hamburger" id = "hamburger" onclick = "document.body.classList.add('noScroll'); document.getElementById('mobile-overlay').classList.add('show') ">☰</button>
-        </nav>
-    </div>
-    <div class = "main-content-wrapper">
-        <div class = "practice-sets-wrapper">
+        </header>
+        <main class = "main-content section">
 
-        </div>
-        <footer class = "footer">
-            <div class = "icons">
-                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo white.svg"></button>
-                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/logos/instagram logo white.svg"></button>
+        </main>
+        <footer class = "footer-content section">
+             <div class = "footer-icons">
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "footer-youtube-logo" src = "/logos/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "footer-instagram-logo" src = "/logos/instagram logo.svg"></button>
             </div>
             <p class = "copyright">© Jerry Liang 2025</p>
         </footer>
