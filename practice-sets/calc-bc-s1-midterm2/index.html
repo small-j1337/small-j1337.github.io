@@ -12,11 +12,15 @@
         font-family: jost;
         src: url("/fonts/Jost-VariableFont_wght.ttf");
     }
+    @font-face{
+        font-family: poxast;
+        src: url("/fonts/Poxast.ttf");
+    }
     header{
-        font-family: jost;
-        width: 50%;
+        font-family: poxast;
+        width: 90%;
         min-width: 400px;
-        padding: 10px;
+        padding: 5px;
         font-size: clamp(20px,4vw,35px);
     }
     .back{
@@ -24,6 +28,7 @@
         text-decoration: none;
         transition: color 0.25s ease;
         font-weight: 500;
+        font-size: 20px;
     }
     .back:hover{
         color: rgb(49, 159, 199);
@@ -32,7 +37,6 @@
     body{
         width: 100vw;
         margin: 0;
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -41,10 +45,11 @@
     html{
         overscroll-behavior: none;
     }
-    .my-pdf{
-        width: 50%;
-        min-width: 400px;
-        height: 100vh;
+    main{
+        width: 80%;
+    }
+    main img{
+        width: 100%;
     }
 </style>
 
@@ -52,7 +57,14 @@
     <header>
     <a class = "back" href = "/practice-sets/"> < Back </a>
     </header>   
-    <iframe class = "my-pdf" src = "practice-set.pdf#toolbar=0&navpanes=0"></iframe>
+    <main>
+        <img src = "1.jpg">
+        <img src = "2.jpg">
+        <img src = "3.jpg">
+        <img src = "4.jpg">
+        <img src = "5.jpg">
+        <img src = "6.jpg">
+    </main>
      <footer class = "footer">
             <div class = "icons">
                 <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo.svg"></button>
