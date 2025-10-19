@@ -9,6 +9,7 @@
 <style>
     @font-face{font-family: poxast; src: url("/fonts/Poxast.ttf");}
     @font-face{font-family: jost; src: url("/fonts/Jost-VariableFont_wght.ttf");}
+    html{overscroll-behavior: none}
     body{
         width: 100vw;
         height: 100vh;
@@ -16,6 +17,7 @@
         display: flex;
         justify-content: center;
         background-color: rgb(221,242,245);
+        overscroll-behavior: none;
     }
     .content-wrapper{
         width: 100vw;
@@ -31,7 +33,12 @@
         justify-content: space-between;
         align-items: center;
     }
-    .main-content{flex: 1;}
+    .main-content{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
     .section{
         margin: 10px;
         border: 2.5px solid rgb(24, 29, 34);
@@ -94,9 +101,51 @@
     }
     .copyright{font-family: jost;}
     .footer-youtube-logo{width: 50px;}
+
+    .test-card{
+        border: 2px solid rgb(24, 29, 34);
+        box-shadow: 5px 5px 0px 1px rgb(24, 29, 34);
+        border-radius: 10px;
+        padding: 50px 30px 50px 30px;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(175,223,225);
+    }
+    .test-card h1{
+        font-family: poxast;
+        margin: 0;
+        font-size: clamp(10px,3vw,20px);
+        text-align: center;
+    }
+    .test-card button{
+        padding: 10px;
+        margin: 20px;
+        width: 75%;
+        background-color: rgb(117,159,164);
+        font-family: poxast;
+        font-size: clamp(5px,2vw,10px);
+        border: 2px solid rgb(24, 29, 34);
+        box-shadow: 0px 5px 0px 0px rgb(24, 29, 34);
+        border-radius: 5px;
+        transition: background-color 0.25s ease;
+    }
+    .test-card button:hover{
+        cursor: pointer;
+        background-color:rgb(46, 190, 190);
+    }
     @media(max-width: 768px){
         .logo-and-name h1{
             display: none;
+        }
+        .main-content{
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .test-card{
+            width: 95%;
         }
     }
 </style>
@@ -114,7 +163,10 @@
             </div>
         </header>
         <main class = "main-content section">
-
+            <div class = "test-card">
+                <h1>AP Calc BC<br>Semester 1<br>Midterm 2</h1>
+                <button onclick = "location.assign('https://jerryliangportfolio.com/practice-sets/calc-bc-s1-midterm2/')">Practice Set</button>
+            </div>
         </main>
         <footer class = "footer-content section">
              <div class = "footer-icons">
