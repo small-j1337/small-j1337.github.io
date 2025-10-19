@@ -51,6 +51,18 @@
     main img{
         width: 100%;
     }
+    .download-link{
+        font-family: jost;
+        background-color: rgb(49, 159, 199);
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.25s ease;
+        text-align: center;
+    }
+    .download-link:hover{
+        background-color: rgb(38, 124, 156);
+    }
 </style>
 
 <body>
@@ -58,6 +70,9 @@
     <a class = "back" href = "/practice-sets/"> < Back </a>
     </header>   
     <main>
+        <div style = "width: 100%; display: flex; justify-content: center;">
+            <a class = "download-link" href = "practice-set.pdf" download = "practice-set.pdf">Click Here to download. Alternatively, you can view the practice set below.</a>
+        </div>
         <img src = "1.jpg">
         <img src = "2.jpg">
         <img src = "3.jpg">
