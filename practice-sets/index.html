@@ -31,12 +31,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .main-content{
-        flex: 1;
-    }
-    .footer-content{
-        height: 150px;
-    }
+    .main-content{flex: 1;}
     .section{
         margin: 10px;
         border: 2.5px solid rgb(24, 29, 34);
@@ -74,9 +69,7 @@
         cursor: pointer;
         transform: translateY(-5px);
     }
-    .ig{
-        width: 45px !important;
-    }
+    .ig{width: 45px !important;}
     .footer-icons{
         display: flex;
         justify-content: center;
@@ -88,18 +81,19 @@
         border: none;
         margin-left: 10px;
         margin-right: 10px;
+        transition: transform 0.25s ease;
+    }
+    .footer-icons button:hover{
+        transform: translateY(-5px);
+        cursor: pointer;
     }
     .footer-content{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .copyright{
-        font-family: jost;
-    }
-    .footer-youtube-logo{
-        width: 50px;
-    }
+    .copyright{font-family: jost;}
+    .footer-youtube-logo{width: 50px;}
     @media(max-width: 768px){
         .logo-and-name h1{
             display: none;
@@ -114,9 +108,9 @@
                 <h1 class = "username">small_j1337</h1>
             </a>
             <div class = "header-icons">
-                <button class = "home"><img src = "/logos/home-icon.svg"></button>
-                <button class = "yt"><img src = "/logos/yt logo.svg"></button>
-                <button class = "ig"><img src = "/logos/instagram logo.svg"></button>
+                <button onclick = "location.assign('https://www.jerryliangportfolio.com')"class = "home"><img src = "/logos/home-icon.svg"></button>
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')" class = "yt"><img src = "/logos/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')" class = "ig"><img src = "/logos/instagram logo.svg"></button>
             </div>
         </header>
         <main class = "main-content section">
