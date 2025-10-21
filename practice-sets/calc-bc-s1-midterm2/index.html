@@ -71,7 +71,7 @@
     </header>   
     <main>
         <div style = "width: 100%; display: flex; justify-content: center;">
-            <a class = "download-link" href = "practice-set.pdf" download = "practice-set.pdf">Click Here to download. Alternatively, you can view the practice set below.</a>
+            <a class = "download-link" id = "download-link" href = "practice-set.pdf" download = "practice-set.pdf">Click Here to download. Alternatively, you can view the practice set below.</a>
         </div>
         <img src = "1.jpg">
         <img src = "2.jpg">
@@ -87,5 +87,15 @@
             </div>
             <p class = "copyright">© Jerry Liang 2025</p>
     </footer>
+    <script>
+        const download = document.getElementById("download-link");
+        download.addEventListener('click',()=>{
+            disclaimer();
+        });
+        function disclaimer(){
+            alert("This is not a leaked midterm. These are practice problems that I either created myself, or were from YouTube and the textbook. Press OK below to start the download. Thank you for your understanding and I hope this practice set helps.");
+        }
+
+    </script>
 </body>
 </html>
