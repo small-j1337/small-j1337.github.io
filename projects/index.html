@@ -31,18 +31,20 @@
         background-size: 100vw 33vw;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        justify-content: flex-start !important;
     }
     .title{
         position: absolute;
         z-index: 150;
         color: white;
-        top: 7.5vw;
-        font-size: 6vw !important;
         animation: site-title 2.5s forwards;
-        text-decoration: underline;
-        text-underline-offset: 1.5vw;
-        text-decoration-color: rgb(255, 76, 106);
-        font-family: poxast;
+        top: 12.5vw;
+        font-family: jost;
+        font-size: clamp(30px,6vw,100px) !important;
+        margin-left: clamp(20px,5vw,100px);
+        font-weight: 700;
+        border: clamp(2px,1vw,20px) solid white;
+        padding: clamp(1px,0.5vw,5px);
     }
     .main-content-wrapper{
         width: 100vw;
