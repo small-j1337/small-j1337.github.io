@@ -62,17 +62,35 @@
         width: 95%;
         align-self: center;
         column-gap: 1vw;
-        margin: 0 auto;
+        margin: auto;
+        margin-top: 2vw;
     }
     .gallery img{
         width: 100%;
-        margin-top: 2vw;
         min-width: 100px;
         transition: transform 0.25s ease;
     }
-    .gallery img:hover{
-        transform: translateY(-1vw);
+    .gallery div{
+        position: relative;
+        overflow: clip;
+        margin-bottom: 2vw;
+
     }
+    .gallery div:hover .project-overlay{
+        opacity: 1;
+    }
+    .project-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 98, 255, 0.75);
+        transition: opacity 0.25s ease;
+        opacity: 0;
+        z-index: 100;
+    }
+    
     @media(max-width: 770px){
         .gallery{
             column-count: 2;
@@ -108,15 +126,42 @@
     <div class = "main-content-wrapper">
         <div class = "main-content">
             <div class = "gallery">
-                <a href = "/artdescription.html#artwork1"><img src = "/artworks/Artwork1.svg"></a>
-                <a href = "/artdescription.html#artwork2"><img src ="/artworks/Artwork2.svg"></a>
-                <a href = "/artdescription.html#artwork3"><img src = "/artworks/Artwork3.jpg"></a>
-                <a href = "/artdescription.html#artwork4"><img src = "/artworks/Artwork4.jpg"></a>
-                <a href = "/artdescription.html#artwork5"><img src = "/artworks/Artwork5.jpg"></a>
-                <a href = "/artdescription.html#artwork6"><img src = "/artworks/Artwork6.jpg"></a>
-                <a href = "/artdescription.html#artwork7"><img src = "/artworks/Artwork7.jpg"></a>
-                <a href = "/artdescription.html#artwork8"><img src = "/artworks/Artwork8.svg"></a>
-                <a href = "/artdescription.html#artwork9"><img src = "/artworks/Artwork9.svg"></a>     
+                <div>
+                    <img src = "/artworks/Artwork1.svg">
+                    <a href = "/artdescription.html#artwork1" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src ="/artworks/Artwork2.svg">
+                    <a href = "/artdescription.html#artwork2" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork3.jpg">
+                    <a href = "/artdescription.html#artwork3" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork4.jpg">
+                    <a href = "/artdescription.html#artwork4" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork5.jpg">
+                    <a href = "/artdescription.html#artwork5" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork6.jpg">
+                    <a href = "/artdescription.html#artwork6" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork7.jpg">
+                    <a href = "/artdescription.html#artwork7" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork8.svg">
+                    <a href = "/artdescription.html#artwork8" class = "project-overlay"></a>
+                </div>
+                <div>
+                    <img src = "/artworks/Artwork9.svg">
+                    <a href = "/artdescription.html#artwork9" class = "project-overlay"></a>
+                </div>     
             </div>
         </div>
         <footer class = "footer">
