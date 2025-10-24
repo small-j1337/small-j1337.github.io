@@ -16,6 +16,10 @@
     font-family: poxast;
     src: url("/fonts/Poxast.ttf")
 }
+@font-face{
+    font-family: jost;
+    src: url("/fonts/Jost-VariableFont_wght.ttf");
+}
 h1{font-size: clamp(50px,8vw,120px); margin: 0;}
 h2{font-size: clamp(40px,6vw,90px); margin: 0;}
 h3{font-size: clamp(30px,4vw,60px); margin: 0;}
