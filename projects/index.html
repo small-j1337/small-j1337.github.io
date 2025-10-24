@@ -61,27 +61,32 @@
         flex: 1;
     }
     .gallery{
-        column-count: 3;
-        width: 95%;
-        align-self: center;
-        column-gap: 1vw;
-        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1400px;
         margin-top: 2vw;
     }
     .gallery img{
         width: 100%;
-        min-width: 100px;
+        min-width: 300px;
         transition: transform 0.25s ease;
     }
     .gallery div{
         position: relative;
         overflow: clip;
-        margin-bottom: 2vw;
+        margin: 5px;
         height: fit-content;
+        width: clamp(300px,40vw,650px);
 
     }
     .gallery div:hover .project-overlay{
         opacity: 1;
+    }
+    .thumbnail{scale: 1; transition: scale 0.25s ease;}
+    .gallery div:hover .thumbnail{
+        scale: 1.1;
+        transition: scale 0.25s ease;
     }
     .project-overlay{
         position: absolute;
@@ -116,6 +121,12 @@
             margin: auto;
             margin-top: 2vw;
         }
+        .gallery div{
+            position: relative;
+            overflow: clip;
+            height: fit-content;
+            width: clamp(300px,90vw,650px);
+        }
     }
 </style>
 <body>
@@ -144,63 +155,63 @@
         <div class = "main-content">
             <div class = "gallery">
                 <div>
-                    <img src = "/artworks/Artwork1.svg">
+                    <img class = "thumbnail" src = "/previews/Artwork1.jpg">
                     <a href = "/artdescription.html#artwork1" class = "project-overlay">
                         <h3 class = "project-title">Human to Human</h3>
                         <p class = "project-description">June 2025<br>Adobe Illustrator</p>
                     </a>
                 </div>
                 <div>
-                    <img src ="/artworks/Artwork2.svg">
+                    <img class = "thumbnail" src ="/previews/Artwork2.jpg">
                     <a href = "/artdescription.html#artwork2" class = "project-overlay">
                         <h3 class = "project-title">Narrative Creature</h3>
                         <p class = "project-description">November 2024<br>Adobe Illustrator</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork3.jpg">
+                    <img class = "thumbnail" src = "/previews/Artwork3.jpg">
                     <a href = "/artdescription.html#artwork3" class = "project-overlay">
                          <h3 class = "project-title">That Awesome Feeling</h3>
                         <p class = "project-description">January 2023<br>Colored Pencil</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork4.jpg">
+                    <img class = "thumbnail" src = "/previews/Artwork4.jpg">
                     <a href = "/artdescription.html#artwork4" class = "project-overlay">
                          <h3 class = "project-title">Underwater</h3>
                         <p class = "project-description">February 2023<br>Colored Pencil & Acrylic</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork5.jpg">
+                    <img class = "thumbnail" src = "/previews/Artwork5.jpg">
                     <a href = "/artdescription.html#artwork5" class = "project-overlay">
                          <h3 class = "project-title">Hungry</h3>
                         <p class = "project-description">December 2024<br>Colored Pencil</p>
                     </a>    
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork6.jpg">
+                    <img class = "thumbnail" src = "/previews/Artwork6.jpg">
                     <a href = "/artdescription.html#artwork6" class = "project-overlay">
                         <h3 class = "project-title">Mother's Day</h3>
                         <p class = "project-description">December 2023<br>Colored Pencil</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork7.jpg">
+                    <img class = "thumbnail" src = "/previews/Artwork7.jpg">
                     <a href = "/artdescription.html#artwork7" class = "project-overlay">
                          <h3 class = "project-title">You Have Instagram?</h3>
                         <p class = "project-description">January 2025<br>Colored Pencil</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork8.svg">
+                    <img class = "thumbnail" src = "/previews/Artwork8.jpg">
                     <a href = "/artdescription.html#artwork8" class = "project-overlay">
                          <h3 class = "project-title">Know Your Rights!</h3>
                         <p class = "project-description">April 2025<br>Adobe Illustrator</p>
                     </a>
                 </div>
                 <div>
-                    <img src = "/artworks/Artwork9.svg">
+                    <img class = "thumbnail" src = "/previews/Artwork9.jpg">
                     <a href = "/artdescription.html#artwork9" class = "project-overlay">
                          <h3 class = "project-title">What?</h3>
                         <p class = "project-description">June 2025<br>Adobe Illustrator</p>
