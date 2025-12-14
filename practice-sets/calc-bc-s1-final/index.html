@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/footer.css">
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+    <title>Jerry's Portfolio - Calc S1 M2</title>
+</head>
+<style>
+    @font-face{
+        font-family: jost;
+        src: url("/fonts/Jost-VariableFont_wght.ttf");
+    }
+    @font-face{
+        font-family: poxast;
+        src: url("/fonts/Poxast.ttf");
+    }
+    header{
+        font-family: poxast;
+        width: 90%;
+        min-width: 400px;
+        padding: 5px;
+        font-size: clamp(20px,4vw,35px);
+    }
+    .back{
+        color: black;
+        text-decoration: none;
+        transition: color 0.25s ease;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .back:hover{
+        color: rgb(49, 159, 199);
+        cursor: pointer;
+    }
+    body{
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overscroll-behavior:none;
+    }
+    html{
+        overscroll-behavior: none;
+    }
+    main{
+        width: 80%;
+    }
+    main img{
+        width: 100%;
+    }
+    .download-link{
+        font-family: jost;
+        background-color: rgb(49, 159, 199);
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.25s ease;
+        text-align: center;
+    }
+    .download-link:hover{
+        background-color: rgb(38, 124, 156);
+    }
+</style>
+
+<body>
+    <header>
+    <a class = "back" href = "/practice-sets/"> < Back </a>
+    </header>   
+    <main>
+        <div style = "width: 100%; display: flex; justify-content: center;">
+            <a class = "download-link" id = "download-link" href = "practice-set.pdf" download = "2025-CalcBC-Semester1-Final-PracticeSet.pdf">Click Here to download. Alternatively, you can view the practice set below.</a>
+        </div>
+        <img src = "1.jpg">
+        <img src = "2.jpg">
+        <img src = "3.jpg">
+        <img src = "4.jpg">
+        <img src = "5.jpg">
+        <img src = "6.jpg">
+        <img src = "7.jpg">
+        <img src = "8.jpg">
+    </main>
+     <footer class = "footer">
+            <div class = "icons">
+                <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo.svg"></button>
+                <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/logos/instagram logo.svg"></button>
+            </div>
+            <p class = "copyright">© Jerry Liang 2025</p>
+    </footer>
+    <script>
+        const download = document.getElementById("download-link");
+        download.addEventListener('click',()=>{
+            disclaimer();
+        });
+        function disclaimer(){
+            alert("This is NOT a leaked final exam. These are practice problems that I either created myself, from past homework problems, or from AI. Press OK below to start the download. Thank you for your understanding and I hope this practice set helps.");
+        }
+
+    </script>
+</body>
+</html>
