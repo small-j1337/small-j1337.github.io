@@ -56,7 +56,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         place-content: center;
-        margin-bottom: 2em;
+        margin-bottom: 2.5px;
     }
     .landmarkContainer{
         position: relative;
@@ -131,15 +131,53 @@
     }
     footer{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 1em;
         margin-bottom: 1em;
         width: 100%;
     }
     .copyright{
         font-family: minecraft-regular;
         font-size: 20px;
+    }
+     .footerContainer{
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+    .footerImage{
+        width: 100%;
+    }
+    .footerOverlay{
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(12, 51, 119, 0.668);
+    }
+    .footerDescription{
+        width: 40%;
+        color: white;
+        font-family: minecraft-regular;
+        font-size: clamp(10px,2vw,20px);
+    }
+    .footerButton{
+        background: none;
+        border: 4px solid white;
+        color: white;
+        transition: background-color 0.25s ease;
+        font-family: minecraft-ten;
+        padding: 1em 2em 1em 2em;
+        font-size: 1.5em;
+    }
+    .footerButton:hover{
+        cursor: pointer;
+        background-color: white;
+        color: rgb(12, 51, 119);
     }
     @media(max-width: 768px){
         main{
@@ -153,6 +191,17 @@
         }
         .copyright{
             font-size: 10px;
+        }
+        .footerOverlay{
+            display:flex;
+            flex-direction: column;
+        }
+        .footerDescription{
+            text-align: center;
+            width: 70%;
+        }
+        .footerButton{
+            font-size: 1em;
         }
     }
 </style>
@@ -254,6 +303,13 @@
         </div>
     </main>
     <footer>
+        <div class = "footerContainer">
+            <img class = "footerImage" src ="footer-banner.jpeg">
+            <div class = "footerOverlay">
+                <p class = "footerDescription">small J clan is an invite-only Java and Bedrock crossplay Minecraft server. DM small_j1337 if you want to become a member or apply to be a tourist for 3 days.</p>
+                <button class = "footerButton" onclick = "location.assign('https://forms.gle/GshKfwuTk1VYpeBL8')">Become A Tourist</button>
+            </div>
+        </div>
         <span class = "copyright">© small_j1337 2026</span>
     </footer>
 </body>
