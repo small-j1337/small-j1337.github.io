@@ -56,11 +56,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         place-content: center;
+        margin-bottom: 2em;
     }
     .landmarkContainer{
         position: relative;
         overflow: hidden;
-        margin: 5px;
+        margin: 2.5px;
         display: flex;
     }
     .landmarkContainer:hover .overlay{
@@ -128,9 +129,30 @@
         color: white;
         font-family: minecraft-regular;
     }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    .copyright{
+        font-family: minecraft-regular;
+        font-size: 20px;
+    }
     @media(max-width: 768px){
         main{
             grid-template-columns: 1fr 1fr;
+        }
+        .location{
+            font-size: 0.8em;
+        }
+        .coordinate{
+            font-size: 0.6em;
+        }
+        .copyright{
+            font-size: 10px;
         }
     }
 </style>
@@ -231,5 +253,8 @@
             </div>
         </div>
     </main>
+    <footer>
+        <span class = "copyright">© small_j1337 2026</span>
+    </footer>
 </body>
 </html>
