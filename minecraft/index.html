@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/x-icon" href="/icon.png">
+    <title>Jerry's Portfolio - small J clan</title>
+</head>
+<style>
+    @font-face{
+        font-family: minecraft-bold;
+        src: url("MinecraftBold.ttf");
+    }
+    @font-face{
+        font-family: minecraft-regular;
+        src: url("MinecraftRegular.ttf");
+    }
+    @font-face{
+        font-family: minecraft-five;
+        src: url("minecraft-five.ttf");
+    }
+    @font-face{
+        font-family: minecraft-ten;
+        src: url("minecraft-ten.ttf");
+    }
+    body{
+        margin: 0;
+        min-width: 300px;
+        width: 100vw;
+        max-width: 1020px;
+        justify-self: center;
+        padding-left: clamp(5px,1.5vw,20px);
+        padding-right: clamp(5px,1.5vw,20px);
+        box-sizing: border-box;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-content: center;
+    }
+    .landmarkContainer{
+        position: relative;
+        overflow: hidden;
+        margin: 5px;
+        display: flex;
+    }
+    .landmarkContainer:hover .overlay{
+        opacity: 1;
+        cursor: hover;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0,0.75);
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.25s ease;
+        cursor: pointer;
+
+    }
+    .navTitle{
+        font-family: minecraft-five;
+        font-size: clamp(10px,1.5vw,25px);
+        text-align: center;
+    }
+    .navLogo{
+        height: clamp(35px,4vw,50px);
+        cursor: pointer;
+        transition: transform 0.25s ease;
+    }
+    .navLogo:hover{
+        transform: translateY(-5px);
+    }
+    .navIcons{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .navIcons > img{
+        height: clamp(20px,3vw,50px);
+        margin-left: clamp(2px,1vw,10px);
+        margin-right: clamp(2px,1vw,10px);
+        cursor: pointer;
+        transition: transform 0.25s ease;
+    }
+    .navIcons > img:hover{
+        transform: translateY(-5px);
+    }
+    .mainBanner{
+        width: 100%;
+    }
+    .landmarkImage{
+        width: 100%;
+        height: fit-content;
+    }
+    .location{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: minecraft-bold;
+    }
+    .coordinate{
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-family: minecraft-regular;
+    }
+    @media(max-width: 768px){
+        main{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
+<body>
+    <nav>
+        <img class = "navLogo" src = "/icon.png" onclick = "location.assign('/')">
+        <h1 class = "navTitle">small J clan 2026</h1>
+        <div class = "navIcons">
+            <img src = "pixel-home.png" onclick = "location.assign('/')">
+            <img src = "pixel-instagram.png" onclick = "location.assign('https://www.instagram.com/small_j1337/')">
+            <img src = "pixel-youtube.png" onclick = "location.assign('https://www.youtube.com/@small_j1337')">
+        </div>
+    </nav>
+     <img class = "mainBanner" src = "main-banner.png">
+    <main>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "spawn-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">Spawn Garden</h3>
+                <p class = "coordinate">(0, 0)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "small_J1337-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">small_J1337's Base</h3>
+                <p class = "coordinate">(700, 700)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "trappedv130-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">trappedv130's Base</h3>
+                <p class = "coordinate">(-100, 700)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "BLAZING2590-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">BLAZING2590's Base</h3>
+                <p class = "coordinate">(2100, 800)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "Kaiboyguy-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">Kaiboyguy's Base</h3>
+                <p class = "coordinate">(2200, 1100)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "currentowner-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">currentowner's Base</h3>
+                <p class = "coordinate">(900, -2300)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "Soliherobrine-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">Soliherobrine's Base</h3>
+                <p class = "coordinate">(0, -1000)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "AimBotSwitch-Base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">AimBotSwitch's Base</h3>
+                <p class = "coordinate">(-2200, 4400)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "moobl_base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">moobl_'s Base</h3>
+                <p class = "coordinate">(3400, -4600)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "DrowsyLeaf-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">DrowsyLeaf's Base</h3>
+                <p class = "coordinate">(300, 1700)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "jjcheng1-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">jjcheng1's Base</h3>
+                <p class = "coordinate">(2500, 1300)</p>
+            </div>
+        </div>
+        <div class = "landmarkContainer">
+            <img class = "landmarkImage" src = "towert1-base.jpeg">
+            <div class = "overlay">
+                <h3 class = "location">towert1's Island</h3>
+                <p class = "coordinate">(-9900, -9900)</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
