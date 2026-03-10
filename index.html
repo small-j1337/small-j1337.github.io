@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name = "theme-color" content = "#686df2"/>
     <link rel="icon" type="image/x-icon" href="/icon.png">
     <link rel = "stylesheet" href = "header.css">
     <link rel = "stylesheet" href = "text-styles.css">
@@ -19,6 +20,9 @@
 </head>
 <body>
     <style>
+        ::selection{
+            background-color: #a3a6fb;
+        }
         @keyframes mid-ground{
             to{
                 transform: translateY(0vw);
@@ -63,6 +67,7 @@
         }
         html{
             overscroll-behavior: none;
+            scrollbar-color: #686df2;
         }
         .container{
             /*Specify Height Here, not in CSS File*/
