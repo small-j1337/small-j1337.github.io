@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/minecraft",
-      "destination": "/minecraft/"
+      "destination": "/minecraft/",
+      "permanent": true,
+      "trailing-slash":true
     }
+    
   ]
+  
 }
