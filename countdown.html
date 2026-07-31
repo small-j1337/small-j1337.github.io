@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+    <title>Countdown Timer</title>
+    <style>
+        /* Center the countdown on the screen */
+        @font-face{
+            font-family: minecraft-five;
+            src: url("fonts/minecraft-five.ttf");
+        }
+         @font-face{
+            font-family: minecraft-regular;
+            src: url("fonts/MinecraftRegular.otf");
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: minecraft-regular;
+        }
+
+        /* Container styling for the timer cards */
+        .countdown-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Styling for individual time blocks */
+        .time-box {
+            background-color: #1e1e24;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff4757;
+            font-family: minecraft-five;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a4b0be;
+            margin-top: 5px;
+            font-family: minecraft-regular;
+        }
+
+        /* Message shown when time is up */
+        #expired-message {
+            font-size: 2rem;
+            color: #2ed573;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Countdown to 2027</h1>
+
+    <!-- The Countdown Elements -->
+    <div class="countdown-container" id="timer">
+        <div class="time-box">
+            <span id="days">00</span>
+            <div class="label">Days</div>
+        </div>
+        <div class="time-box">
+            <span id="hours">00</span>
+            <div class="label">Hours</div>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+
+    <!-- The Expired Message Banner -->
+    <div id="expired-message">The Event Has Begun!</div>
+
+    <script>
+        // 1. CHANGE THIS DATE to your specific target date and time
+        const targetDate = new Date("Dec 31, 2026 23:59:59").getTime();
+
+        // 2. Update the countdown functions every single second
+        const interval = setInterval(function() {
+
+            // Get the current local time
+            const now = new Date().getTime();
+
+            // Find the remaining distance between now and the target date
+            const difference = targetDate - now;
+
+            // 3. Check if the countdown has finished
+            if (difference < 0) {
+                clearInterval(interval);
+                document.getElementById("timer").style.display = "none";
+                document.getElementById("expired-message").style.display = "block";
+                return;
+            }
+
+            // 4. Calculate intervals for days, hours, minutes, and seconds
+            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // 5. Output the results to the HTML and add leading zeros if single digits
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+
+        }, 1000);
+    </script>
+
+</body>
+</html>
