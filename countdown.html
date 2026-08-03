@@ -73,6 +73,7 @@
             color: #2ed573;
             font-weight: bold;
             display: none;
+            font-family: minecraft-five;
         }
     </style>
 </head>
@@ -83,29 +84,29 @@
     <!-- The Countdown Elements -->
     <div class="countdown-container" id="timer">
         <div class="time-box">
-            <span id="days">00</span>
+            <span id="days">--</span>
             <div class="label">Days</div>
         </div>
         <div class="time-box">
-            <span id="hours">00</span>
+            <span id="hours">--</span>
             <div class="label">Hours</div>
         </div>
         <div class="time-box">
-            <span id="minutes">00</span>
+            <span id="minutes">--</span>
             <div class="label">Minutes</div>
         </div>
         <div class="time-box">
-            <span id="seconds">00</span>
+            <span id="seconds">--</span>
             <div class="label">Seconds</div>
         </div>
     </div>
 
     <!-- The Expired Message Banner -->
-    <div id="expired-message">The Event Has Begun!</div>
+    <div id="expired-message">Happy New Year!</div>
 
     <script>
         // 1. CHANGE THIS DATE to your specific target date and time
-        const targetDate = new Date("Dec 31, 2026 23:59:59").getTime();
+        const targetDate = new Date("January 1, 2027 00:00:00").getTime();
 
         // 2. Update the countdown functions every single second
         const interval = setInterval(function() {
