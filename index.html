@@ -83,6 +83,7 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
+            min-height: 100dvh;
         }
         html{
             overscroll-behavior: none;
@@ -142,6 +143,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1;
         }
         .main-content{
             display: flex;
@@ -209,9 +211,9 @@
     <div class = "mobile-overlay" id = "mobile-overlay">
         <ul class = "mobile-links">
             <button class = "close" id = "close" onclick = "document.body.classList.remove('noScroll'); document.getElementById('mobile-overlay').classList.remove('show') ">&times</button>
-            <li><a href = "/">Home</a></li>
-            <li><a href = "/projects/">My Projects</a></li>
-            <li><a href = "/community/">Community</a></li>
+            <li id = "home-mobile-button"><a  href = "/">Home</a></li>
+            <li id = "projects-mobile-button"><a href = "/projects/">My Projects</a></li>
+            <li id = "community-mobile-button"><a href = "/community/">Community</a></li>
             
         </ul>
     </div>
@@ -233,7 +235,7 @@
         <div class = "main-content">
             <div class = "grid-container">
                 <div class = "grid-item"><img src = "/index-grid/image-2.jpg"></div>
-                <div class = "grid-item" style = "background-color: rgb(20, 66, 94)"><p>Frontend Website Developer</p></div>
+                <div class = "grid-item" style = "background-color: rgb(20, 66, 94)"><p>Engineering <br>@ CWRU</p></div>
                 <div class = "grid-item"><img src = "/index-grid/image-5.png"></div>
                 <div class = "grid-item" style = "background-color: rgb(33, 101, 144)"><p>Artist</p></div>
                 <div class = "grid-item" id = "center-picture"><audio id="damage-sound" src="/sounds/minecraft-damage.mp3" preload="auto"></audio><img src = "/index-grid/image-1.jpg"><div class = "damage-overlay"></div></div>
@@ -244,14 +246,15 @@
                 
             </div>
         </div>
-        <footer class = "footer">
+        
+    </div>
+    <footer class = "footer">
             <div class = "icons">
                 <button onclick = "window.open('https://www.youtube.com/@small_j1337','_blank')"><img class = "youtube-logo" src = "/logos/yt logo.svg"></button>
                 <button onclick = "window.open('https://www.instagram.com/small_j1337/','_blank')"><img class = "instagram-logo" src = "/logos/instagram logo.svg"></button>
             </div>
             <p class = "copyright">© Jerry Liang 2026</p>
         </footer>
-    </div>
     <script>
         const midground = document.getElementById("midground");
         window.addEventListener("scroll",()=> {

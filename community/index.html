@@ -144,10 +144,9 @@
     <div class = "mobile-overlay" id = "mobile-overlay">
         <ul class = "mobile-links" id = "mobile-links">
             <button class = "close" id = "close" onclick = "document.body.classList.remove('noScroll'); document.getElementById('mobile-overlay').classList.remove('show') ">&times</button>
-            <li><a href = "/">Home</a></li>
-            <li><a href = "/projects/">My Projects</a></li>
-            <li><a href = "/community/">Community</a></li>
-            
+            <li onclick = "location.assign('/')" id = "home-mobile-button"><a  href = "/">Home</a></li>
+            <li onclick = "location.assign('/projects/')" id = "projects-mobile-button"><a href = "/projects/">My Projects</a></li>
+            <li onclick = "location.assign('/community/')" id = "community-mobile-button"><a href = "/community/">Community</a></li>
         </ul>
     </div>
     <div class = "container">
@@ -165,12 +164,16 @@
     <div class = "main-content-wrapper">
         <div class = "main-content">
             <div class = "icons-container">
+                <a class = "icon" href = "https://caserocketteam.org/" target = "_blank"><img src = "/logos/crt-logo.jpg">
+                    <div class = "icon-overlay"><p>Case Rocket Team</p></div>
+                </a>
+                <a class = "icon" href = "https://freestyleacademy.rocks/~JerryL/" target = "_blank"><img src = "/logos/freestyle-academy-logo.png">
+                    <div class = "icon-overlay"><p>Freestyle Academy</p></div>
+                </a>
                 <a class = "icon" href = "https://sites.google.com/mvla.net/mvhs-ambassadors/home" target = "_blank"><img src = "/logos/amb logo.png">
                     <div class = "icon-overlay"><p>MVHS Ambassadors</p></div>
                 </a>
-                <a class = "icon" href = "https://www.mvhsbc2m.org/" target = "_blank"><img src = "/logos/bc2m logo.jpeg">
-                    <div class = "icon-overlay"><p>MVHS Bring Change to Mind Club</p></div>
-                </a>
+                
                 <a class = "icon" href = "https://cengclass.org/" target = "_blank"><img src = "/logos/ceng logo.jpg">
                     <div class = "icon-overlay"><p>Computer Engineers of the Next Generation</p></div>
                 </a>
@@ -186,6 +189,10 @@
                 <a class = "icon" href = "https://mvhacks.io" target = "_blank"><img src = "/logos/mvhacks logo.png">
                     <div class = "icon-overlay"><p>Mountain View Hacks</p></div>
                 </a>
+                <a class = "icon" href = "https://instagram.com/mvhs.bc2m" target = "_blank"><img src = "/logos/bc2m logo.jpeg">
+                    <div class = "icon-overlay"><p>MVHS Bring Change to Mind Club</p></div>
+                </a>
+                
             </div>
         </div>
         <footer class = "footer">
